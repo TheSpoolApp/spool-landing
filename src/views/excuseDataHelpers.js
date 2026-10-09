@@ -1,13 +1,9 @@
 "use client";
 import { summarizeMinutesBySubscription } from '../lib/analyticsMetrics.mjs';
+import { TEAM_USER_IDS } from '../lib/analyticsAccess.mjs';
+export { TEAM_USER_IDS } from '../lib/analyticsAccess.mjs';
 // Pure computation functions for Excuse Data dashboard.
 // No React, no side effects. Called from useMemo hooks.
-
-export const TEAM_USER_IDS = [
-  'JtQHbKFtCpcJO1E21LSHFFv1aGL2', // Praf
-  '4Zyo7cM2OYh18sZYgjmSQW1NnNM2', // Vedika
-  'Cv6ojv5yl1NfDJiC3KBQ3sF07LH3', // Daneal
-];
 
 /**
  * Compute text diversity per user.

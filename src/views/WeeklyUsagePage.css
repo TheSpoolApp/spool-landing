@@ -1,0 +1,42 @@
+.weekly-usage { color: #453c30; }
+.weekly-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-bottom: 18px; }
+.weekly-heading h2 { margin: 0 0 6px; font-size: 26px; color: #604800; }
+.weekly-heading p { margin: 0; color: #716451; }
+.weekly-refresh { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex-shrink: 0; }
+.weekly-refresh span { font-size: 12px; color: #716451; }
+.weekly-refresh .btn-refresh { background: #2760bf; color: #fff; }
+.weekly-refresh .btn-refresh:hover { background: #1c4d9e; }
+.weekly-refresh button:disabled { opacity: .6; cursor: wait; }
+.weekly-notice { background: #fff0dc; border-left: 4px solid #cc7232; padding: 15px 18px; line-height: 1.6; border-radius: 0 8px 8px 0; }
+.weekly-error { padding: 16px; margin: 16px 0; background: #fff0ec; border: 1px solid #d68d79; border-radius: 8px; color: #8a301c; }
+.weekly-empty { padding: 44px 24px; text-align: center; line-height: 1.6; color: #716451; }
+.weekly-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 24px 0; }
+.weekly-cards > div { padding: 22px; background: #fffdfa; border: 1px solid #e8dcc8; border-radius: 12px; }
+.weekly-cards span, .weekly-cards small { display: block; color: #716451; font-size: 13px; }
+.weekly-cards strong { display: block; margin: 10px 0; color: #604800; font-size: 30px; }
+.weekly-surface { padding: 24px; margin-bottom: 20px; border: 1px solid #e8dcc8; border-radius: 12px; background: #fffdfa; }
+.weekly-surface h3 { margin: 0 0 6px; font-size: 19px; }
+.weekly-surface p { line-height: 1.6; }
+.weekly-surface h3 + p { margin-top: 0; font-size: 14px; color: #716451; }
+.weekly-chart { height: 360px; margin: 24px 0; }
+.weekly-table-scroll { overflow-x: auto; }
+.weekly-table-scroll:focus-visible, .weekly-method summary:focus-visible { outline: 2px solid #2760bf; outline-offset: 3px; }
+.weekly-usage table { width: 100%; border-collapse: collapse; white-space: nowrap; font-size: 14px; }
+.weekly-usage caption { text-align: left; color: #716451; font-size: 12px; padding: 10px 0; }
+.weekly-usage th, .weekly-usage td { padding: 14px 12px; text-align: right; border-bottom: 1px solid #e8dcc8; }
+.weekly-usage th:first-child { text-align: left; }
+.weekly-usage thead { background: #f6efe5; font-size: 12px; }
+.weekly-primary-row { background: #eef3fc; }
+.weekly-footnote { font-size: 12px; color: #716451; }
+.weekly-interval { margin-bottom: 0; font-size: 14px; }
+.weekly-method summary { cursor: pointer; font-weight: 600; }
+.weekly-method li { margin-bottom: 10px; line-height: 1.6; }
+.weekly-method p, .weekly-method ul { font-size: 14px; }
+@media (max-width: 700px) {
+  .weekly-heading { flex-direction: column; }
+  .weekly-refresh { align-items: flex-start; }
+  .weekly-cards { grid-template-columns: 1fr; gap: 10px; }
+  .weekly-cards > div { padding: 18px; }
+  .weekly-surface { padding: 16px; }
+  .weekly-chart { height: 330px; }
+}

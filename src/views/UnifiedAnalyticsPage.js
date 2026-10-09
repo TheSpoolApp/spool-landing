@@ -7,6 +7,8 @@ import AnalyticsPage from './AnalyticsPage';
 import ChurnReportPage from './ChurnReportPage';
 import ExcuseDataPage from './ExcuseDataPage';
 import ReleasesPage from './ReleasesPage';
+import WeeklyUsagePage from './WeeklyUsagePage';
+import { DASHBOARD_EMAILS } from '../lib/analyticsAccess.mjs';
 import {
   endOfLocalDay,
   formatLocalDate,
@@ -20,17 +22,9 @@ const TABS = [
   { id: 'age-cohort',  label: 'Customer Info' },
   { id: 'churn',       label: 'Churn Report' },
   { id: 'excuse-data', label: 'Excuse Data' },
+  { id: 'weekly-usage', label: 'Weekly Usage' },
   { id: 'analytics',   label: 'Onboarding Funnel' },
   { id: 'releases',    label: 'Releases' },
-];
-
-// Client-side gate only — Firestore security rules are the real enforcement.
-// Add cofounder Google emails here to grant dashboard access.
-const ALLOWED_EMAILS = [
-  'prafull2001@gmail.com',
-  'spoolappteam@gmail.com',
-  'manot.jainam@gmail.com',
-  // TODO: add Neal's Google account email
 ];
 
 const LIFETIME_START = '2024-01-01';
@@ -92,13 +86,13 @@ function UnifiedAnalyticsInner() {
         <div className="login-prompt">
           <p>Sign in with an authorized Google account to view the dashboard.</p>
         </div>
-      ) : !ALLOWED_EMAILS.includes((user.email || '').toLowerCase()) ? (
+      ) : !DASHBOARD_EMAILS.includes((user.email || '').toLowerCase()) ? (
         <div className="login-prompt">
           <p>This account ({user.email}) is not authorized for the Spool dashboard.</p>
         </div>
       ) : (
         <>
-          {activeTab !== 'releases' && (
+          {!['releases', 'weekly-usage'].includes(activeTab) && (
           <div className="filters">
             <label>
               From:
@@ -134,6 +128,7 @@ function UnifiedAnalyticsInner() {
             {activeTab === 'excuse-data' && (
               <ExcuseDataPage panelMode dateFrom={appliedFrom} dateTo={appliedTo} />
             )}
+            {activeTab === 'weekly-usage' && <WeeklyUsagePage key={user.uid} user={user} />}
             {activeTab === 'analytics' && (
               <AnalyticsPage panelMode dateFrom={appliedFrom} dateTo={appliedTo} />
             )}

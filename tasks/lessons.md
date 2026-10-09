@@ -1,5 +1,17 @@
 # Project Lessons
 
+- Upstream authentication throttling or service failures are not expired user sessions. Keep the saved analytics report and distinguish retryable upstream failures from invalid-token responses.
+
+- Weekly-chart visual QA exposed a clipped long y-axis title on mobile and low-contrast inherited refresh styling. Use concise units, wrapped x-axis labels, and readable button contrast; check screenshots, not just overflow assertions.
+
+- Next.js adds its own alert live region for route announcements. Scope browser assertions for error alerts to the feature under test so navigation announcements cannot satisfy or collide with them. Wait for the tab URL transition to finish before a test reloads the page; local tab state can render before the router commits its URL.
+
+- The bundled Playwright package can expect a different Chromium revision than the locally cached browser. Check the executable before UI tests and select an installed browser explicitly rather than assuming the package cache matches. Keep explicitly launched browser harness names outside Node's default `test-*` discovery so `npm test` does not require a running browser server.
+
+- When an analytics request belongs in the web app, deliver an integrated refreshable view rather than stopping at an external report. Confirm the destination early and carry the work through UI and data-path verification. Validate restored report fields before rendering; a version and array lengths alone do not make a persisted aggregate safe to display.
+
+- Research exports compare self-reported total screen time with lifetime requested unlock minutes. Requested minutes are not measured screen time, and lifetime totals cannot be assigned to individual weeks. Verify timestamped outcome coverage before labeling a cohort trend as screen-time reduction; missing activity must not become zero usage.
+
 - When legal wording describes Focus Web, inventory the current enabled filters for Instagram, YouTube, X, Snapchat and Facebook in app source. Platform examples and refund guidance must cover all five without implying that web filters affect native apps or that every setting is enabled by default.
 
 - Legal links in old Spool builds use `/#/terms` and `/#/privacy`; Next.js treats these as homepage fragments. Keep a homepage hash redirect for installed builds and use canonical `/terms` and `/privacy` URLs in future app releases. Check the live legal page, not just an older local checkout, before editing or asserting what customers saw.
