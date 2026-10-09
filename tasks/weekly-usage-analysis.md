@@ -3,8 +3,10 @@
 ## Push to main (authorized October 9, 2026)
 
 - [x] Re-read project rules, lessons, tracking, and branch state.
-- [ ] Reconcile with current remote main, commit the tested feature, and push directly to main before publishing the SHA on any feature branch.
-- [ ] Verify the remote main commit; report deployment status separately from Git push success.
+- [x] Reconcile with current remote main, commit the tested feature, and push directly to main before publishing the SHA on any feature branch.
+- [x] Verify the remote main commit; report deployment status separately from Git push success.
+
+Rebased cleanly onto `30cfc7a`, preserving four newer main commits. Re-ran all 59 tests, production build, and desktop/mobile browser suite successfully. Feature commit `773d7aa62a2172dc30f39e18599d3b8de05a25dd` pushed directly to main; remote SHA verified with `git ls-remote`. Production deployment completion has not been checked.
 
 ## Web app integration (requested follow-up)
 
