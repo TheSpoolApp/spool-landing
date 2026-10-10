@@ -1,5 +1,14 @@
 # Weekly usage analysis
 
+## Production availability follow-up (October 10, 2026)
+
+- [x] Re-read rules, lessons, tracking and Git state; record missing production verification.
+- [ ] Check the live dashboard/API, deployment status and cofounder access path against current main.
+- [ ] Fix the verified cause or repush a fresh main commit as needed.
+- [ ] Confirm the production route/bundle/API after deployment and report any remaining authenticated-session limitation.
+
+Confirmed production mismatch: canonical `www.thespoolapp.com/analytics?tab=weekly-usage` returns 200, but `/api/analytics/weekly-usage` returns 404 on both domain forms. Remote main still includes the feature; its latest commit has no deployment statuses. The most recent GitHub Production deployment points to pre-feature commit `30cfc7a` (October 3). Preparing a fresh main push while checking the deployment integration. No access-list changes are warranted by this evidence.
+
 ## Push to main (authorized October 9, 2026)
 
 - [x] Re-read project rules, lessons, tracking, and branch state.
