@@ -50,6 +50,15 @@ Date: October 12, 2026
 
 ## Publication result
 
+### Authenticated continuation
+
+- User confirms Vercel sign-in. Re-read rules, lessons, tracking and Git state; latest main remains `69a47e7ec4186e0ab53df3ca0a068bfc091f6071` with a clean working tree.
+- Existing project/dashboard confirms Production is still `30cfc7a`; connected Git repository is displayed as `prafull2001/spool-landing`, the old repository location. Inspect connection and deploy latest main without changing domains or replacing hosting.
+- Git settings explicitly report “Error: Project Link not found.” No deploy hooks exist. Reconnect the existing project's Git source to the transferred repository, then deploy current main and check production.
+- Reconnect produced no change. Removed the unusable Git connection through Vercel's confirmation; project settings/configuration are preserved. Current account's chooser exposes only `jainam-m02` repositories. Add GitHub Scope produced no new browser tab or organization. Automatic Git connection remains unresolved; try CLI publication to the same existing project without changing GitHub permissions.
+- User reports enabling/selecting the Spool group and authorizes correcting it if needed. Confirmed Git remote is `TheSpoolApp/spool-landing`; recheck the chooser and prefer restoring Git deployment now that access may be available.
+- Refreshed Git chooser still lists only `jainam-m02`. Vercel CLI 63.1.2 installed through npm's temporary execution cache; normal device authorization opened in the signed-in account, but Allow Access is disabled. No CLI auth or deployment success is assumed.
+
 - Source update committed and pushed directly to `main`: `176bcd09ce127b803a4617cf6fe75b797b4acba2`. `git ls-remote` confirms the remote SHA. Feature branch was not pushed before main.
 - New commit's GitHub checks/statuses are empty and no new Vercel Production deployment is recorded. A push is not deployment verification.
 - Canonical public pages still lack the changes; no new deployed commit or working public Android/deletion section can be reported yet.

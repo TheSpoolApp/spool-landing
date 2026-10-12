@@ -1,5 +1,9 @@
 # Project Lessons
 
+- Vercel's device authorization can render the initiated login details while “Allow Access” remains disabled. Treat a disabled-button timeout as an incomplete login; inspect the current UI and do not force-enable controls or assume the CLI is authenticated.
+
+- A transferred repository can leave Vercel's Git link at the old owner with “Project Link not found.” New main pushes then produce no Vercel statuses or deployments. Inspect the project's Git connection and repair the link before treating another push as a deployment trigger.
+
 - The support navigation's CSS class is `support-quick-links`, but its verified accessible name is `Account help`. Verify the rendered name before a scoped browser click; a locator timeout with no matches does not indicate the link is broken.
 
 - In this CUA session, a viewport override set before creating a new tab did not carry into that tab: DOM reported 1280×720 despite a 390×844 request. Verify `innerWidth`/`innerHeight` after applying an override to an existing tab, and label screenshots from their measured viewport.
