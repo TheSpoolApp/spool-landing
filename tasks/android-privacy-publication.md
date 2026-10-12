@@ -48,6 +48,14 @@ Date: October 12, 2026
 - No real customer account was deleted, no downstream erasure test was run, and no support/customer messages were sent. Website-only checks do not establish end-to-end deletion.
 - Vercel CLI has no login and the browser is signed out. Asked the user to sign in to the existing account; no permission or hosting changes made.
 
+## Publication result
+
+- Source update committed and pushed directly to `main`: `176bcd09ce127b803a4617cf6fe75b797b4acba2`. `git ls-remote` confirms the remote SHA. Feature branch was not pushed before main.
+- New commit's GitHub checks/statuses are empty and no new Vercel Production deployment is recorded. A push is not deployment verification.
+- Canonical public pages still lack the changes; no new deployed commit or working public Android/deletion section can be reported yet.
+- Existing Vercel sign-in tab is retained for user handoff. No hosting migration or replacement site was created.
+- This task remains incomplete: authenticated Vercel publication, signed-out post-deploy checks/screenshots, operator retention decisions and end-to-end deletion verification are outstanding.
+
 ## Sources
 
 - Android main at `7dddb38` and current `SpoolAuth.kt`, `SpoolAnalytics.kt`, Accessibility service XML/service, backend and data-safety inventory.
