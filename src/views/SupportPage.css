@@ -280,3 +280,19 @@
     text-align: center;
   }
 }
+.support-quick-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.support-quick-links a {
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--primary-blue);
+  border-radius: 15px;
+  color: var(--dark-text);
+  font-weight: 700;
+  text-decoration: underline;
+}

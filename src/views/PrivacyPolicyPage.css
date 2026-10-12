@@ -44,7 +44,7 @@
   font-weight: 600;
 }
 
-.privacy-policy-container h3[id] {
+.privacy-policy-container [id] {
   scroll-margin-top: 6rem;
 }
 
@@ -94,4 +94,24 @@
 .privacy-policy-container a:hover {
   color: var(--primary-orange);
   text-decoration: underline;
+}
+
+.privacy-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 2px solid var(--primary-blue);
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.privacy-quick-links a,
+.privacy-request-link {
+  font-weight: 700;
+  text-decoration: underline !important;
+}
+
+@media (max-width: 768px) {
+  .privacy-policy-container { padding-top: 6rem; }
 }

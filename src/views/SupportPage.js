@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Link from 'next/link';
 import Logo from '../components/Logo/Logo.js';
 import Footer from '../components/Footer/Footer.js';
 import './SupportPage.css';
@@ -59,6 +60,10 @@ const SupportPage = () => {
             <p className="support-subtitle" data-aos="fade-up" data-aos-delay="100">
               Got questions about Spool? Need assistance? We'd love to hear from you.
             </p>
+            <nav className="support-quick-links" aria-label="Account help">
+              <Link href="/privacy#delete-account">Delete your Spool account and data</Link>
+              <a href="https://play.google.com/store/account/subscriptions">Manage Google Play subscriptions</a>
+            </nav>
           </div>
         </section>
 
@@ -68,10 +73,11 @@ const SupportPage = () => {
             <div className="contact-content">
               <div className="contact-info" data-aos="fade-right">
                 <h2>Get in Touch</h2>
-                <p><a href="/privacy#delete-account"><strong>Delete your Spool account and data</strong></a> — request deletion in the app or by email, even if you no longer have the app installed.</p>
+                <p><Link href="/privacy#delete-account"><strong>Delete your Spool account and data</strong></Link> — request deletion in the app or by email, even if you no longer have the app installed.</p>
                 <p>For refund-data-sharing consent withdrawal or privacy requests, email <a href="mailto:team@thespoolapp.com">team@thespoolapp.com</a>. Sending a request is not confirmation that processing is complete.</p>
                 <p><a href="https://support.apple.com/en-us/118428">Manage or cancel an Apple subscription</a> · <a href="https://support.apple.com/en-us/118223">Request an App Store refund</a></p>
                 <p><a href="https://support.google.com/googleplay/answer/7018481?hl=en">Manage or cancel a Google Play subscription</a></p>
+                <p><strong>Deleting your account does not cancel a subscription.</strong> Use the store where you purchased to cancel separately.</p>
                 <p>Send us a message and we'll get back to you as soon as possible.</p>
                 <div className="contact-details">
                   <div className="contact-item">
@@ -144,6 +150,7 @@ const SupportPage = () => {
                     required
                   >
                     <option value="">Select a topic</option>
+                    <option value="Delete my Spool account">Delete my Spool account</option>
                     <option value="General Question">General Question</option>
                     <option value="Technical Support">Technical Support</option>
                     <option value="Feature Request">Feature Request</option>
