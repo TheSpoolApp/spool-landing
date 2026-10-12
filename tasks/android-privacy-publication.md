@@ -10,7 +10,7 @@ Date: October 12, 2026
 - [ ] Verify actual retention settings and provider policies; document unresolved facts without invented deadlines.
 - [x] Complete source-backed privacy/deletion/support updates; unresolved operator/provider periods remain explicit.
 - [x] Verify production build, links, mobile and desktop layout.
-- [ ] Publish through the existing host and verify public signed-out routes, deployment commit and screenshots.
+- [x] Publish through the existing host and verify public signed-out routes, deployment commit and screenshots.
 
 ## Initial findings
 
@@ -52,6 +52,11 @@ Date: October 12, 2026
 
 ### Authenticated continuation
 
+- October 12 deployment repair: browser control recovered. TheSpoolApp's Installed GitHub Apps lists Codex and Claude, but no Vercel. Existing Vercel Git chooser still only exposes jainam-m02. Prepare Vercel's organization installation limited to spool-landing, then reconnect the same project and deploy current main.
+- GitHub confirms Vercel was installed for Spool-Group, the organization named by the user, while the normal repository belongs to TheSpoolApp. Opened the official Vercel app installation and prepared Only select repositories → TheSpoolApp/spool-landing; final Install has not been submitted by the agent. Guided the user to complete this access grant in their GitHub window. Screenshot: vercel-repository-scope.jpg.
+- User reports completing setup. Vercel Git settings now explicitly show TheSpoolApp/spool-landing and Connected just now. Correct existing project connection is restored. Screenshot: vercel-git-connected.jpg. Inspect/trigger Production from main, then verify actual public output.
+- Vercel Create Deployment resolves main to 0a833696ee491d37d27b035886811da79d3dd3dc and explicitly shows Production. Submitted Deploy to Production for that prepared/built source; waiting for Vercel result before reporting publication.
+
 - User confirms Vercel sign-in. Re-read rules, lessons, tracking and Git state; latest main remains `69a47e7ec4186e0ab53df3ca0a068bfc091f6071` with a clean working tree.
 - Existing project/dashboard confirms Production is still `30cfc7a`; connected Git repository is displayed as `prafull2001/spool-landing`, the old repository location. Inspect connection and deploy latest main without changing domains or replacing hosting.
 - Git settings explicitly report “Error: Project Link not found.” No deploy hooks exist. Reconnect the existing project's Git source to the transferred repository, then deploy current main and check production.
@@ -67,12 +72,22 @@ Date: October 12, 2026
 - Recovery inventory has no browsers. The existing-tab lookup returns “Browser is not available: 2”; URL-based recovery returns “No browser is available.” Browser reconnection is now an external blocker; no organization/app permission or replacement connection was changed during this retry.
 - Concrete remaining connection action: in existing project's Git settings, Add GitHub Scope for `TheSpoolApp` with repository access limited to `spool-landing`, select that namespace and Connect the repository. Current chooser cannot select it because it only exposes `jainam-m02`. Do not start another unrelated CLI login.
 - October 12, 12:09 PM PDT status check: latest main is `6a1a003`; all three signed-out public URLs still serve the old content (privacy dated October 2, neither required anchor, support has neither new link). Last recorded Vercel Production is still `30cfc7a`. Browser inventory remains empty, so any manual connection repair cannot be inspected. Make one fresh main tracking commit/push to trigger the existing integration if restored, then verify actual checks/deployment/public content.
+- Fresh trigger commit `0a833696ee491d37d27b035886811da79d3dd3dc` pushed to main and remote SHA verified. Follow-up after 30 seconds still has zero Vercel statuses and zero deployments for this SHA; all public pages remain old. Publication is still blocked. Evidence: `reconnection-retry-verification.json` in the existing screenshot/results directory.
 
 - Source update committed and pushed directly to `main`: `176bcd09ce127b803a4617cf6fe75b797b4acba2`. `git ls-remote` confirms the remote SHA. Feature branch was not pushed before main.
 - New commit's GitHub checks/statuses are empty and no new Vercel Production deployment is recorded. A push is not deployment verification.
 - Canonical public pages still lack the changes; no new deployed commit or working public Android/deletion section can be reported yet.
 - Existing Vercel sign-in tab is retained for user handoff. No hosting migration or replacement site was created.
-- This task remains incomplete: authenticated Vercel publication, signed-out post-deploy checks/screenshots, operator retention decisions and end-to-end deletion verification are outstanding.
+- Authenticated publication and signed-out checks are now complete (see verified publication below). Operator retention decisions and end-to-end deletion verification remain unresolved.
+
+### Verified publication
+
+- Existing project Git connection restored to TheSpoolApp/spool-landing after the user installed Vercel for the correct organization/repository.
+- Vercel Production deployment BzKeeb4TQ1ABYtzxx2zgvc82H5ro is Ready, built in 28 seconds from main commit 0a833696ee491d37d27b035886811da79d3dd3dc, and assigned www.thespoolapp.com. No replacement project or domain migration.
+- October 12, 12:32 PM PDT signed-out HTTP checks passed for /privacy#android, /privacy#delete-account, /support: HTTP 200, current October 12 privacy, both anchor IDs, exact request email subject, Android/OpenAI/retention copy, existing iOS/refund disclosures, and both support links.
+- Live layout checks passed at measured 1280×720 and 390×844. All six cases have no horizontal overflow. Privacy headings land about 96px from the top; both support quick links are visible in the first mobile viewport. Actual support → deletion navigation works and request mailto is exact. Six live screenshots visually inspected.
+- Evidence: live-public-verification.json, live-layout-results.json, live-android-mobile.jpg, live-delete-account-mobile.jpg, live-support-mobile.jpg, corresponding desktop screenshots, and vercel-production-ready.jpg.
+- Save this verification to main and verify one real automatic deployment after the repaired Git connection; no website source changes are needed.
 
 ## Sources
 

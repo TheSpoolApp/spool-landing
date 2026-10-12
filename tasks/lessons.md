@@ -1,5 +1,7 @@
 # Project Lessons
 
+- After a repository transfer, verify the GitHub App is installed in the new organization itself. Vercel's existing personal-account installation does not establish access to the moved repository; an Add GitHub Scope popup that opens no observable tab is not an installation success.
+
 - A successful Vercel device authorization can authenticate a different browser account from the dashboard being controlled. Verify `vercel whoami` and target-team membership before linking; “scope does not exist” can be an account mismatch, not a missing website or permission to create a replacement project.
 
 - Running npm's offline exec through the bundled Node can try to stat a missing runtime `node/lib` directory even when the requested CLI is cached. Use the observed cached CLI executable directly for follow-up commands; do not reinstall or alter repository dependencies to fix a CLI wrapper failure.
