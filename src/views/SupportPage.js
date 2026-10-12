@@ -68,8 +68,10 @@ const SupportPage = () => {
             <div className="contact-content">
               <div className="contact-info" data-aos="fade-right">
                 <h2>Get in Touch</h2>
+                <p><a href="/privacy#delete-account"><strong>Delete your Spool account and data</strong></a> — request deletion in the app or by email, even if you no longer have the app installed.</p>
                 <p>For refund-data-sharing consent withdrawal or privacy requests, email <a href="mailto:team@thespoolapp.com">team@thespoolapp.com</a>. Sending a request is not confirmation that processing is complete.</p>
                 <p><a href="https://support.apple.com/en-us/118428">Manage or cancel an Apple subscription</a> · <a href="https://support.apple.com/en-us/118223">Request an App Store refund</a></p>
+                <p><a href="https://support.google.com/googleplay/answer/7018481?hl=en">Manage or cancel a Google Play subscription</a></p>
                 <p>Send us a message and we'll get back to you as soon as possible.</p>
                 <div className="contact-details">
                   <div className="contact-item">

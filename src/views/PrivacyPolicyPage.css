@@ -44,6 +44,10 @@
   font-weight: 600;
 }
 
+.privacy-policy-container h3[id] {
+  scroll-margin-top: 6rem;
+}
+
 .privacy-policy-container p {
   line-height: 1.7;
   font-size: 1.1rem;
