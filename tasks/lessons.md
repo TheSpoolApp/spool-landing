@@ -1,5 +1,17 @@
 # Project Lessons
 
+- The support navigation's CSS class is `support-quick-links`, but its verified accessible name is `Account help`. Verify the rendered name before a scoped browser click; a locator timeout with no matches does not indicate the link is broken.
+
+- In this CUA session, a viewport override set before creating a new tab did not carry into that tab: DOM reported 1280×720 despite a 390×844 request. Verify `innerWidth`/`innerHeight` after applying an override to an existing tab, and label screenshots from their measured viewport.
+
+- CUA documentation examples use a `browser` handle, but the entry-point call does not create that JavaScript binding. Bind the already selected browser ID before requesting viewport capabilities; do not assume example variables exist.
+
+- The live Android reflection endpoint's deployed `hello_world` source uses OpenAI, and its source includes request-body logging. Verify deployed processors and log retention before describing online reflections; cached source and on-device camera analysis do not establish remote processing or zero retention.
+
+- Firestore's live field-list endpoint rejected `pageSize=100` with “Only 0 is supported” during TTL verification. Omit the optional page-size parameter and check the returned pagination token; an API error is not evidence that no expiry policy exists.
+
+- The offline dependency cache can lack a locked tarball even when another checkout has dependencies installed. If `npm ci --offline` reports `ENOTCACHED`, keep the lockfile unchanged and retry the normal locked installation with the bundled supported Node runtime.
+
 - Upstream authentication throttling or service failures are not expired user sessions. Keep the saved analytics report and distinguish retryable upstream failures from invalid-token responses.
 
 - Weekly-chart visual QA exposed a clipped long y-axis title on mobile and low-contrast inherited refresh styling. Use concise units, wrapped x-axis labels, and readable button contrast; check screenshots, not just overflow assertions.
@@ -18,7 +30,7 @@
 
 - Date-filtered acquisition dashboards need an authoritative date-scoped denominator. RevenueCat `customers_new` is comparable to first opens/new customers; Firestore onboarding surveys and device-keyed sessions are downstream, mutable, and must never be presented as downloads. Parse HTML date inputs as local calendar dates (not UTC `YYYY-MM-DD` strings), use stable cohort timestamps such as `createdAt`/`started_at`, and label source-specific gaps explicitly.
 - A persistent lifetime snapshot also needs a bounded incremental refresh. Do not make the manual refresh repeat the account-wide per-customer backfill; advance the baseline from the durable webhook ledger, retain the last good report on failure, and show that failure beside its stale timestamp.
-- In zsh verification scripts, avoid reserved task variables such as `status` (read-only) and `path` (tied to `PATH`); use specific names such as `http_status` and `asset_url` so the audit fails only for the deployed state being checked.
+- In zsh verification scripts, avoid reserved task variables such as `status` (read-only) and `path` (tied to `PATH`); use specific names such as `http_status` and `asset_url` so the audit fails only for the deployed state being checked. This also applies to read-only file-inspection loops: assigning `path` can prevent subsequent commands such as `cat` from resolving.
 - Analytics timing semantics must name the data source and event, not say “the app” does one thing. In current v14, Firestore `screens_completed` is written when a screen is left, while PostHog `onboarding_step_viewed` fires on entry; context packs must preserve that distinction before anyone interprets missing rows or dwell.
 - Route-specific analytics must hide inapplicable outcomes, not render them as zero. The direct existing-account setup never sees the paywall, so its cohort view should omit pre-paywall/paywall-rate cards, rows, and columns rather than implying a 0% paywall failure.
 - Versioned onboarding display numbers are not globally unique across coordinator handoffs. v14 acquisition and post-purchase both use ordinals 15–19, so never derive the direct-setup catalog with `number >= 15`; slice from the stable `screen_time_permission` name or it will prepend unrelated acquisition screens.
