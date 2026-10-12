@@ -15,7 +15,7 @@ const TOPICS = [
   'Doomscrolling research & behavioral science',
   'Head-to-head app comparisons (Dull, UNDOOMED, Opal, One Sec, Freedom, ScreenZen, Brainrot, Unrot, Clearspace)',
   'Practical guides for breaking phone-checking habits',
-  'What Spool\'s 13,000+ voice check-ins reveal about why people scroll',
+  'What Spool\'s 26,000+ voice check-ins reveal about why people scroll',
 ];
 
 const BlogPage = ({ faqs = [] }) => {
@@ -26,7 +26,7 @@ const BlogPage = ({ faqs = [] }) => {
         <div className="blog-header">
           <h1>The Spool Blog: digital-wellness research and honest app comparisons</h1>
           <p>
-            Original research, head-to-head app comparisons, and practical guides for people trying to stop doomscrolling. Drawn from 13,000+ voice check-ins users have spoken into Spool — real data about why people open Instagram at 10pm, why &quot;just checking&quot; is the most common excuse, and which screen-time apps actually produce lasting change versus which ones get uninstalled in week two.
+            Original research, head-to-head app comparisons, and practical guides for people trying to stop doomscrolling. Drawn from 26,000+ voice check-ins users have spoken into Spool — real data about why people open Instagram at 10pm, why &quot;just checking&quot; is the most common excuse, and which screen-time apps actually produce lasting change versus which ones get uninstalled in week two.
           </p>
         </div>
 
@@ -144,7 +144,7 @@ const BlogPage = ({ faqs = [] }) => {
               <p className="blog-author-bio" itemProp="description">
                 Prafull Sharma is the founder of Spool, the iPhone screen-time app built around
                 AI voice check-ins. He leads product and engineering, and writes here about
-                digital-wellbeing research, app comparisons, and what 13,000+ user-spoken
+                digital-wellbeing research, app comparisons, and what 26,000+ user-spoken
                 statements reveal about why people doomscroll. Spool&apos;s mechanism draws on
                 Matthew Lieberman&apos;s 2007 UCLA work on affect labeling and Allcott, Gentzkow
                 &amp; Song&apos;s 2022 <em>Digital Addiction</em> paper in the{' '}

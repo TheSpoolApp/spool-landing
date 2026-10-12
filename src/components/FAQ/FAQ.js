@@ -37,7 +37,7 @@ const categories = [
       },
       {
         q: "Does Spool actually reduce screen time?",
-        a: "Yes. Spool users see an average 80% screen time reduction in their first week, with sustained 25% long-term reduction. The app has interrupted over 13,000 scrolling sessions. The approach is backed by behavioral research showing that naming your intention before acting weakens compulsive behavior at its source."
+        a: "Yes. Spool users see an average 80% screen time reduction in their first week, with sustained 25% long-term reduction. The app has interrupted over 26,000 scrolling sessions. The approach is backed by behavioral research showing that naming your intention before acting weakens compulsive behavior at its source."
       },
       {
         q: "Is Spool available for Android?",

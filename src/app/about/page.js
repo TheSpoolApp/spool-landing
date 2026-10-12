@@ -52,7 +52,7 @@ const CO_FOUNDERS = [
 const STATS = [
   { num: '4.8★', label: 'App Store rating (126 reviews)' },
   { num: '3,000+', label: 'users' },
-  { num: '13,000+', label: 'scrolling sessions interrupted' },
+  { num: '26,000+', label: 'scrolling sessions interrupted' },
   { num: '80%', label: 'first-week screen-time reduction' },
   { num: '25%', label: 'sustained long-term reduction' },
 ];
@@ -181,7 +181,7 @@ export default function AboutPage() {
             regime Spool&apos;s voice check-in occupies.
           </p>
 
-          <h2>What we&apos;ve learned from 13,000+ voice check-ins</h2>
+          <h2>What we&apos;ve learned from 26,000+ voice check-ins</h2>
           <p>
             We capture each user&apos;s statement at the moment of temptation — a category of data
             that&apos;s rare in the digital-wellbeing literature, which tends to rely on
