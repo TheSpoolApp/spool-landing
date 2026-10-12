@@ -1,5 +1,9 @@
 # Project Lessons
 
+- A successful Vercel device authorization can authenticate a different browser account from the dashboard being controlled. Verify `vercel whoami` and target-team membership before linking; “scope does not exist” can be an account mismatch, not a missing website or permission to create a replacement project.
+
+- Running npm's offline exec through the bundled Node can try to stat a missing runtime `node/lib` directory even when the requested CLI is cached. Use the observed cached CLI executable directly for follow-up commands; do not reinstall or alter repository dependencies to fix a CLI wrapper failure.
+
 - Vercel's device authorization can render the initiated login details while “Allow Access” remains disabled. Treat a disabled-button timeout as an incomplete login; inspect the current UI and do not force-enable controls or assume the CLI is authenticated.
 
 - A transferred repository can leave Vercel's Git link at the old owner with “Project Link not found.” New main pushes then produce no Vercel statuses or deployments. Inspect the project's Git connection and repair the link before treating another push as a deployment trigger.
