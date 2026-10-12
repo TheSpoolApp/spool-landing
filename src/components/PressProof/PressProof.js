@@ -34,7 +34,7 @@ const PressProof = () => {
 
         <div className="press-proof-actions" aria-label="Press coverage summary">
           <aside className="press-proof-stat">
-            <strong>13k+</strong>
+            <strong>26k+</strong>
             <span>excuses recorded</span>
           </aside>
           <Link href="/press" className="press-proof-link">

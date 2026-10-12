@@ -326,7 +326,7 @@ export const CONTENT = {
       <h2>The psychological answer (the part most articles miss)</h2>
       <p>Compulsive phone checking isn't only a "I lack willpower" or "the app is too addictive" problem. It's a regulation problem. You reach for your phone because something else is happening — an emotional state you're trying to manage without consciously processing it.</p>
 
-      <p>Across <a href="/">Spool</a>'s 13,000+ voice check-ins (where users speak their reason for opening a distracting app), the most common stated reasons fall into a small set:</p>
+      <p>Across <a href="/">Spool</a>'s 26,000+ voice check-ins (where users speak their reason for opening a distracting app), the most common stated reasons fall into a small set:</p>
       <ul>
         <li>Boredom (~40% of opens)</li>
         <li>Anxiety / restlessness (~20%)</li>
@@ -779,7 +779,7 @@ export const CONTENT = {
 
       <p>This works for all-day, low-grade compulsive checking — the 47 micro-opens of Instagram between 9am and 11pm, the reach-for-the-phone-when-bored that Freedom's scheduled blocks don't catch.</p>
 
-      <p>Spool also captures structured data: across 13,000+ recorded voice check-ins, most users frame their unlock as a first-person want or need ("I just want to scroll," "I just need to check"). The AI surfaces those patterns back to the user as the actual driver of change.</p>
+      <p>Spool also captures structured data: across 26,000+ recorded voice check-ins, most users frame their unlock as a first-person want or need ("I just want to scroll," "I just need to check"). The AI surfaces those patterns back to the user as the actual driver of change.</p>
 
       <h2>Why Spool is the better fit for doomscrolling</h2>
       <p>Spool is built for the messy hours outside a scheduled focus block: the quick Instagram check between tasks, the Shorts detour after opening YouTube, and the late-night reach you barely notice. Focus Web can remove the feed while the voice check-in captures the reason behind the native-app open.</p>
@@ -1221,7 +1221,7 @@ export const CONTENT = {
       <h2>The data difference</h2>
       <p>Jomo tracks structured behavioral data — block compliance, session counts, mood ratings, streak length. This data is useful for "am I sticking to my program?" questions.</p>
 
-      <p>Spool tracks qualitative data — your actual spoken statements at the moment of impulse. Across 13,000+ recordings, this has surfaced a finding Jomo's data structure can't produce: most users frame their unlock as a first-person want or need, and a small set of phrases recurs across users with no platform-mediated connection. "Just checking" appears in the data of users who have never spoken to each other.</p>
+      <p>Spool tracks qualitative data — your actual spoken statements at the moment of impulse. Across 26,000+ recordings, this has surfaced a finding Jomo's data structure can't produce: most users frame their unlock as a first-person want or need, and a small set of phrases recurs across users with no platform-mediated connection. "Just checking" appears in the data of users who have never spoken to each other.</p>
 
       <p>Different data, different insights. Jomo answers "am I doing my program?" Spool answers "what am I actually saying to myself when I reach for the phone?"</p>
 
@@ -1871,7 +1871,7 @@ export const CONTENT = {
       <p><strong>Key stats:</strong></p>
       <ul>
         <li>4.8 stars on the App Store (126 reviews)</li>
-        <li>13,000+ scrolling sessions interrupted</li>
+        <li>26,000+ scrolling sessions interrupted</li>
         <li>US$4.99 billed every week or US$44.99 billed once per year</li>
       </ul>
 

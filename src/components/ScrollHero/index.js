@@ -103,7 +103,7 @@ const ScrollHero = () => {
                             <img src="/app-store-badge.svg" alt="Download on the App Store" />
                         </DownloadLink>
                         <aside className="hero-excuses-badge">
-                            <span>13k+ excuses recorded</span>
+                            <span>26k+ excuses recorded</span>
                         </aside>
                     </div>
                 </motion.div>

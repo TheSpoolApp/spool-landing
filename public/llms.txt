@@ -21,7 +21,7 @@ Focus Web filters the web interfaces shown inside Spool. It does not modify the 
 
 - 4.8 stars on the App Store (126 reviews worldwide)
 - 3,000+ users
-- 13,000+ scrolling sessions interrupted
+- 26,000+ scrolling sessions interrupted
 - 80% average screen time reduction in the first week
 - 25% sustained long-term reduction
 

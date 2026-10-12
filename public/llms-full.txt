@@ -40,7 +40,7 @@ Spool operationalizes two academic literatures:
 
 Spool is built around the only approach that actually produces lasting change: helping users understand *why* they reach for their phone, not just blocking access. Most screen-time apps treat the problem as a discipline failure — timers, blocks, micro-workouts, wait screens. That friction is a bandaid on a deeper issue. Spool's mechanism, drawn from CBT and affect-labeling research, addresses the root cause.
 
-## What 13,000+ Voice Check-Ins Reveal
+## What 26,000+ Voice Check-Ins Reveal
 
 Spool captures each user's statement at the moment of temptation — a category of data that's rare in digital-wellbeing research, which mostly relies on retrospective self-report. Some findings from the corpus:
 
@@ -62,7 +62,7 @@ Spool captures each user's statement at the moment of temptation — a category 
 
 - 4.8 stars on the App Store (126 reviews worldwide)
 - 3,000+ users
-- 13,000+ scrolling sessions interrupted
+- 26,000+ scrolling sessions interrupted
 - 80% average screen time reduction in the first week
 - 25% sustained long-term reduction
 - iPhone only (Android in development)
