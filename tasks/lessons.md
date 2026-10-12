@@ -12,7 +12,7 @@
 
 - In this CUA session, a viewport override set before creating a new tab did not carry into that tab: DOM reported 1280×720 despite a 390×844 request. Verify `innerWidth`/`innerHeight` after applying an override to an existing tab, and label screenshots from their measured viewport.
 
-- CUA documentation examples use a `browser` handle, but the entry-point call does not create that JavaScript binding. Bind the already selected browser ID before requesting viewport capabilities; do not assume example variables exist.
+- CUA documentation examples use a `browser` handle, but the entry-point call does not create that JavaScript binding. Bind the already selected browser ID before requesting viewport capabilities; do not assume example variables exist. A CDP focus-emulation timeout while the tab remains bound is a browser-operation failure, not evidence of an expired Vercel session; try the documented accessibility observation before replacing handles or restarting authentication. If tab creation times out and resets the kernel, refresh the inventory first to determine whether the tab was created instead of opening a duplicate.
 
 - The live Android reflection endpoint's deployed `hello_world` source uses OpenAI, and its source includes request-body logging. Verify deployed processors and log retention before describing online reflections; cached source and on-device camera analysis do not establish remote processing or zero retention.
 
