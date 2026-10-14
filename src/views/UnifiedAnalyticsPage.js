@@ -30,7 +30,7 @@ const TABS = [
 const LIFETIME_START = '2024-01-01';
 
 function UnifiedAnalyticsInner() {
-  const { user, handleSignIn, handleSignOut } = useFirebaseAuth();
+  const { user, authLoading, signingIn, authError, handleSignIn, handleSignOut } = useFirebaseAuth();
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -77,14 +77,19 @@ function UnifiedAnalyticsInner() {
               <button className="btn-logout" onClick={handleSignOut}>Sign Out</button>
             </>
           ) : (
-            <button className="btn-login" onClick={handleSignIn}>Sign In</button>
+            <button className="btn-login" onClick={handleSignIn} disabled={authLoading || signingIn}>
+              {authLoading ? 'Checking sign-in…' : signingIn ? 'Opening Google…' : 'Sign In'}
+            </button>
           )}
         </div>
       </header>
 
+      {authError && <p className="dashboard-auth-error" role="alert">{authError}</p>}
+
       {!user ? (
         <div className="login-prompt">
-          <p>Sign in with an authorized Google account to view the dashboard.</p>
+          <p>{authLoading ? 'Checking your saved sign-in…' : 'Sign in with an authorized Google account to view the dashboard.'}</p>
+          {!authLoading && <p>Complete Google sign-in in this browser. Your selected report will stay open when you return.</p>}
         </div>
       ) : !DASHBOARD_EMAILS.includes((user.email || '').toLowerCase()) ? (
         <div className="login-prompt">

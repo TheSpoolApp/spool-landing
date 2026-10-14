@@ -64,3 +64,5 @@
 - Public `/get?src=` links must never send visitors to the Spool homepage. Every platform, including desktop tests, must continue toward the App Store listing; only the handoff mechanism varies by browser.
 
 - Completion requires an explicit `dropped_off === false`; missing state must remain unknown. Show numerator and denominator, weight daily totals by session count, distinguish Firebase setup from RevenueCat conversion, and paginate full selected windows rather than silently truncating to 5,000.
+
+- Firebase popup sign-in can still fail on mobile when its helper uses a separate origin. Verify the actual OAuth callback authorization before switching authDomain; proxy auth helpers transparently, permit only same-origin framing and keep auth query strings out of pageview analytics. Surface sign-in errors instead of logging them silently.

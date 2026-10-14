@@ -56,3 +56,18 @@
   margin-bottom: 16px;
   flex-wrap: wrap;
 }
+
+.dashboard-auth-error {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #b42318;
+  border-radius: 12px;
+  background: #fff4f2;
+  color: #8a1c13;
+  overflow-wrap: anywhere;
+}
+
+.unified-analytics .btn-login:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}

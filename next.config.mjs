@@ -15,7 +15,20 @@ const nextConfig = {
         { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
         { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
       ]
+    }, {
+      source: '/__/auth/:path*',
+      headers: [
+        { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+        { key: 'Cache-Control', value: 'no-store' },
+        { key: 'Referrer-Policy', value: 'no-referrer' },
+      ],
     }]
+  },
+  async rewrites() {
+    return [{
+      source: '/__/auth/:path*',
+      destination: '/api/firebase-auth/:path*',
+    }];
   },
   async redirects() {
     return [

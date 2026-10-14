@@ -18,6 +18,8 @@ function isAllowlisted(pathname) {
 }
 
 function shouldSkip(pathname) {
+  // OAuth callback parameters must never be sent to pageview analytics.
+  if (pathname.startsWith('/__/auth/')) return true
   if (isAllowlisted(pathname)) return false
   if (pathname.startsWith('/api/')) return true
   if (pathname.startsWith('/_next/static') || pathname.startsWith('/_next/image')) return true
