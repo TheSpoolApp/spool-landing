@@ -3,23 +3,32 @@ export const FOCUS_WEB_PLATFORMS = [
     slug: 'instagram-without-reels',
     platform: 'Instagram',
     shortLabel: 'Instagram without Reels',
-    title: 'Instagram Without Reels, Stories, Explore or DMs',
+    title: 'Instagram Without Reels on iPhone (Keep DMs)',
     description:
-      'Filter Instagram’s supported website features inside Spool; the native app is unchanged. Spool Focus Web can hide Reels, Stories, Explore, and direct messages with separate controls.',
+      'Use Instagram without Reels on iPhone. Hide Reels in Spool’s Focus Web browser while keeping DMs available. See setup, optional filters, and limits.',
     answer:
-      'Spool gives iPhone users a version of Instagram where Reels, Stories, Explore, and direct messages (DMs) can each be hidden. You choose the surfaces to remove, then open Instagram inside Spool’s Focus Web browser.',
+      'To use Instagram without Reels on iPhone, open Instagram in Spool’s Focus Web browser and turn on the Reels filter. Leave the DMs filter off to keep messaging available. Stories and Explore have separate controls. This filters Instagram’s website inside Spool; it does not change the native Instagram app, and shared Reel links may still open.',
     removes: ['Reels', 'Stories', 'Explore', 'Direct messages (DMs)'],
     available:
       'Instagram’s web experience remains available inside Spool; only supported surfaces you switch off are filtered. Shared Reel links may still open.',
     problem:
       'Blocking all of Instagram also blocks the parts you may use intentionally. Spool works at the feature level instead: remove the surface that starts the scroll while leaving the rest of the web experience available.',
     details: [
-      'Hide Reels so the short-form video feed and its navigation entry do not invite another scroll.',
-      'Hide Stories when the story row is the habit loop you want to interrupt.',
-      'Hide Explore to remove Instagram’s recommendation-led discovery surface.',
-      'Hide DMs if checking messages is the doorway that repeatedly pulls you back into Instagram.',
+      'Open Focus Web in Spool and choose Instagram.',
+      'Sign in to Instagram inside the Focus Web browser.',
+      'Turn on the Reels filter. Leave DMs unfiltered if you want to keep messaging.',
+      'Choose whether to filter Stories and Explore separately, then browse Instagram through Focus Web.',
+      'Return to Instagram through Spool for the filtered experience; opening the native Instagram app will still show its normal interface.',
     ],
     faq: [
+      {
+        q: 'Can I use Instagram without Reels and still keep DMs?',
+        a: 'Yes. Enable Reels filtering and leave DMs filtering off in Spool Focus Web. You can use Instagram messaging in the filtered browser. These controls do not change the native Instagram app.',
+      },
+      {
+        q: 'Will this block every Instagram Reel link?',
+        a: 'No. Focus Web hides supported Reels surfaces, but shared Reel links may still open. It is a filtered way to browse Instagram, not a guarantee that every individual video is blocked.',
+      },
       {
         q: 'Can I remove Instagram Reels without blocking Instagram?',
         a: 'Yes. Open Instagram inside Spool Focus Web and switch off Reels. Spool filters the website inside Spool; shared Reel links may still open and the native app is unchanged.',

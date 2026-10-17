@@ -1,5 +1,22 @@
 # Project Lessons
 
+- A static article renderer should receive the resolved slug from its server route rather than use a client hook solely for params. Importing the full content registry across that client boundary ships unrelated articles to every reader; compare emitted bundles and preserve client CTA boundaries when moving rendering server-side.
+
+- In this Next.js 16 build, the first uncached render of a dynamic article redirect produced duplicate Location headers even with only the page throwing. Known article namespace redirects belong in config before rendering; invalid slugs still use `notFound()`. Test cold responses and exact Location headers instead of accepting a warm-cache pass.
+
+- Comparison FAQ schema was generated from separate metadata that the article renderer did not display. Keep structured data tied to visible content; remove unmatched markup instead of adding duplicate answers or treating deprecated FAQ rich results as a ranking objective.
+
+- An `Accept: text/markdown` rewrite to one global AI guide hides article-specific content and bypasses normal redirects/404s. Preserve the requested URL's content and status unless a real per-page alternate representation exists; verify crawler headers alongside browser requests.
+
+- A quiet npm install can still be progressing through Sharp's install check. Inspect the log for completion before declaring a hang or restarting; this session finished normally without a workaround. Use the bundled runtime and preserve the lockfile.
+
+- Search Console now exposes a Generative AI performance report in this property. Check the live UI and Google's current AI optimization guide before repeating older documentation that AI visibility cannot be reported separately; general Web totals still do not establish an AI-specific lift.
+
+- Search SEO review (2026-10-17): validate blog and comparison slugs against their own content type and return `notFound()` for unknown/wrong-type slugs; visible fallback copy alone does not produce an HTTP 404.
+- AI crawler groups do not inherit wildcard robots exclusions. Keep the same private-route exclusions in every allowed group; Google's token is `Google-Extended`, and Googlebot governs Search AI features.
+- Sitemap `lastModified` must reflect a substantive content update, not the build date. Omit dates without a maintained source instead of advertising unchanged pages as fresh.
+- Public AI summaries, schema, and visible copy must agree with current product/legal and team evidence. Audit trial/pricing, founders, and supported Focus Web platforms together; appended corrections do not repair contradictory earlier text. Verify whether a component is actually used before reporting its stale copy as a live defect.
+
 - After a repository transfer, verify the GitHub App is installed in the new organization itself. Vercel's existing personal-account installation does not establish access to the moved repository; an Add GitHub Scope popup that opens no observable tab is not an installation success.
 
 - A successful Vercel device authorization can authenticate a different browser account from the dashboard being controlled. Verify `vercel whoami` and target-team membership before linking; “scope does not exist” can be an account mismatch, not a missing website or permission to create a replacement project.
