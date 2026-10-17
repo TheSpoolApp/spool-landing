@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Footer from '@/components/Footer/Footer';
-import Logo from '@/components/Logo/Logo';
+import Header from '@/components/Header/Header';
 import { DownloadLink } from '@/components/DownloadLink/DownloadLink';
 import { FOCUS_WEB_PLATFORMS } from '@/data/focusWeb';
 import styles from './focus-web.module.css';
@@ -32,7 +32,7 @@ const breadcrumbSchema = {
 export default function FocusWebPage() {
   return (
     <>
-      <Logo />
+      <Header />
       <main className={styles.page}>
         <script
           type="application/ld+json"

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { DownloadLink } from '@/components/DownloadLink/DownloadLink';
-import Logo from '@/components/Logo/Logo';
+import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import '@/views/BlogPost.css';
 import { PAPERS } from '@/data/research';
@@ -9,7 +9,7 @@ import { PRAFULL } from '@/data/authors';
 const CANONICAL = 'https://www.thespoolapp.com/science';
 
 export const metadata = {
-  title: 'The Science Behind Spool — Research Foundation',
+  title: { absolute: 'The Science Behind Spool: Research Foundation' },
   description:
     'Spool operationalizes peer-reviewed research from UCLA, Stanford, NYU, Yale, Harvard, and UC Irvine. The papers on affect labeling, mindfulness and craving, and digital addiction that the product is built on.',
   alternates: { canonical: CANONICAL },
@@ -55,7 +55,7 @@ export default function SciencePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
       />
-      <Logo />
+      <Header />
       <article className="blog-post-container">
         <div className="blog-post-header">
           <Link href="/blog" className="back-to-blog">← Back to Blog</Link>

@@ -15,7 +15,8 @@ export async function generateMetadata({ params }) {
     return { title: 'Compare' };
   }
   return {
-    title: meta.title,
+    // Skip the "| Spool" template when the title already names the brand.
+    title: /Spool/.test(meta.title) ? { absolute: meta.title } : meta.title,
     description: meta.description,
     alternates: { canonical: `https://www.thespoolapp.com/compare/${id}` },
     openGraph: {
@@ -23,7 +24,6 @@ export async function generateMetadata({ params }) {
       description: meta.description,
       url: `https://www.thespoolapp.com/compare/${id}`,
       type: 'article',
-      images: [{ url: 'https://www.thespoolapp.com/og-compare.jpg', width: 1200, height: 630 }],
     },
   };
 }

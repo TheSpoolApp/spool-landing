@@ -235,11 +235,15 @@ Editorial correction: comparison pages must be honest but product-led. Do not cr
 ---
 
 ## Key Stats to Use in Content
-- 4.8 stars on App Store (120+ global reviews)
-- 2,000+ downloads
-- 8,000+ scrolling sessions interrupted
-- 80% avg screen time reduction in first week
-- 25% sustained long-term reduction
-- $7.99/month or $39.99/year
+
+Checked against live site copy on 2026-10-17. Items marked UNVERIFIED need a fresh
+source (App Store Connect, Firestore, or RevenueCat) before they appear in new content.
+
+- 26,000+ excuses (voice check-ins) recorded (matches homepage, commit d2ae5a2)
+- $4.99/week or $44.99/year, US prices (matches `PolicyCopy.js` and Terms, updated 2026-10-02)
 - Voice check-in takes ~5 seconds
-- Verbalizing intentions increases behavior change by 42% (Harvard/Yale research)
+- UNVERIFIED: 4.8 stars on App Store (120+ global reviews)
+- UNVERIFIED: download count (old figure: 2,000+)
+- UNVERIFIED: 80% avg screen time reduction in first week; 25% sustained long-term reduction
+- DO NOT USE: "Verbalizing intentions increases behavior change by 42% (Harvard/Yale)" has no
+  traceable source (see SEO-CONTENT-BACKLOG.md E1)

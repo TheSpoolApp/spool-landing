@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './ScrollHero.css';
-import spoolWelcome from '../../assets/spool_welcome_screen.png';
+import spoolWelcome from '../../assets/spool_welcome_screen.webp';
 
 const PhoneMockup = ({ y, scale }) => {
     return (

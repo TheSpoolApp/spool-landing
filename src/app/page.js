@@ -24,7 +24,7 @@ export default function Page() {
             "url": "https://www.thespoolapp.com",
             "image": "https://www.thespoolapp.com/og-homepage-20k.jpg",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-            "downloadUrl": "https://apps.apple.com/us/app/spool-save-your-thread/id6749428484",
+            "downloadUrl": "https://apps.apple.com/us/app/spool-screen-time-control/id6749428484",
             "applicationSubCategory": "Screen Time Management"
           })
         }}

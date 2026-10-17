@@ -1,6 +1,5 @@
 "use client";
 import React, { useRef, useEffect } from 'react';
-import Link from 'next/link';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import NotificationCards from './NotificationCards';
 import PhoneMockup from './PhoneMockup';
@@ -86,12 +85,6 @@ const ScrollHero = () => {
                         y: initialContentY,
                     }}
                 >
-                    {/* Header with Logo */}
-                    <div className="hero-header">
-                        <Link href="/" className="hero-logo-center">
-                            <img src="/images/spooli_logo.jpg" alt="Spool Logo" />
-                        </Link>
-                    </div>
 
                     {/* Main Title - Simple and Premium */}
                     <div className="hero-content-layer">

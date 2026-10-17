@@ -1,5 +1,6 @@
 import { FOCUS_WEB_LIMITS } from '@/components/PolicyCopy';
 import Link from 'next/link';
+import Header from '@/components/Header/Header';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -146,6 +147,8 @@ const breadcrumbSchema = {
 
 export default function ComparePage() {
   return (
+    <>
+    <Header />
     <main className={styles.page}>
       <script
         type="application/ld+json"
@@ -208,5 +211,6 @@ export default function ComparePage() {
         </Link>
       </section>
     </main>
+    </>
   );
 }

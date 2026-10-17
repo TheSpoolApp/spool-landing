@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import Logo from '../components/Logo/Logo';
+import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import { DownloadLink } from '../components/DownloadLink/DownloadLink';
 import { PRAFULL } from '../data/authors';
@@ -19,7 +19,7 @@ const BlogPost = () => {
   if (!post) {
     return (
       <>
-        <Logo />
+        <Header />
         <div className="blog-post-container">
           <div className="blog-post-content">
             <h1>Post Not Found</h1>
@@ -33,10 +33,12 @@ const BlogPost = () => {
   }
 
   const isComparison = post.category === 'Comparison';
+  const showFocusWebNote = isComparison || /Focus Web|feed block/i.test(post.content);
+  const showPricingNote = isComparison || /\$4\.99|\$44\.99/.test(post.content);
 
   return (
     <>
-      <Logo />
+      <Header />
       <article className="blog-post-container">
         <div className="blog-post-header">
           <Link href={isComparison ? '/compare' : '/blog'} className="back-to-blog">
@@ -70,12 +72,14 @@ const BlogPost = () => {
           </div>
         </div>
 
-        <div className="blog-post-content">
-          {(isComparison || /Focus Web|feed block/i.test(post.content)) && <p>{FOCUS_WEB_LIMITS} <Link href="/focus-web">See platform-specific limitations</Link>.</p>}
-          {(isComparison || /\$4\.99|\$44\.99/.test(post.content)) && (
-            <p><strong>Subscription information updated October 2, 2026.</strong> {STANDARD_PRICING} {TRIAL_TERMS} <Link href="/terms">Subscription and refund terms</Link>.</p>
-          )}
-        </div>
+        {(showFocusWebNote || showPricingNote) && (
+          <div className="blog-post-content">
+            {showFocusWebNote && <p>{FOCUS_WEB_LIMITS} <Link href="/focus-web">See platform-specific limitations</Link>.</p>}
+            {showPricingNote && (
+              <p><strong>Subscription information updated October 2, 2026.</strong> {STANDARD_PRICING} {TRIAL_TERMS} <Link href="/terms">Subscription and refund terms</Link>.</p>
+            )}
+          </div>
+        )}
 
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
 

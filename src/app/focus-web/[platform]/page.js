@@ -2,7 +2,7 @@ import { FOCUS_WEB_LIMITS } from '@/components/PolicyCopy';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer/Footer';
-import Logo from '@/components/Logo/Logo';
+import Header from '@/components/Header/Header';
 import { DownloadLink } from '@/components/DownloadLink/DownloadLink';
 import { FOCUS_WEB_PLATFORMS, getFocusWebPlatform } from '@/data/focusWeb';
 import styles from '../focus-web.module.css';
@@ -67,7 +67,7 @@ export default async function FocusWebPlatformPage({ params }) {
 
   return (
     <>
-      <Logo />
+      <Header />
       <main className={styles.page}>
         <script
           type="application/ld+json"

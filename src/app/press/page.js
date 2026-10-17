@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Logo from '@/components/Logo/Logo';
+import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import '@/views/BlogPost.css';
 import { PRESS_ITEMS } from '@/data/press';
@@ -54,7 +54,7 @@ export default function PressPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pressSchema) }}
       />
-      <Logo />
+      <Header />
       <article className="blog-post-container">
         <div className="blog-post-header">
           <Link href="/" className="back-to-blog">← Back to Home</Link>

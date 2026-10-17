@@ -26,7 +26,7 @@ export const metadata = {
   alternates: { canonical: 'https://www.thespoolapp.com' },
   icons: {
     icon: '/spooli-app-icon.png',
-    apple: '/spooli-app-icon.png'
+    apple: '/apple-touch-icon.png'
   },
 };
 
@@ -104,12 +104,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebSite",
               "url": "https://www.thespoolapp.com",
-              "name": "Spool",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.thespoolapp.com/blog?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
+              "name": "Spool"
             })
           }}
         />
