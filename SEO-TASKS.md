@@ -1,6 +1,6 @@
 # Spool SEO / ASO / GEO Task List
 
-## VERIFIED — Search Console SEO / GEO review (2026-10-17)
+## RELEASED — Search Console SEO / GEO review (2026-10-17)
 
 - [x] Read project rules, lessons, existing SEO plans, and Git state
 - [x] Access Search Console and record Web/AI performance comparisons, indexing, sitemap, and CWV evidence
@@ -8,13 +8,19 @@
 - [x] Implement focused SEO/GEO fixes and synchronize affected public content
 - [x] Run relevant checks and production build; review rendered metadata and crawl paths
 - [x] Record findings, evidence limitations, and delivery status
-- [ ] Release reviewed changes and measure the updated pages after recrawl
+- [x] Confirm user authorization to merge PR #11 and deploy the intended SEO changes
+- [x] Confirm the PR head is reviewed commit `717396a` and Vercel checks passed
+- [x] Merge PR #11 to main as `acf70ed`
+- [x] Verify the production deployment and live routes
+- [ ] Measure the updated pages after recrawl
 
 Evidence captured: the live domain property's Web and Google AI comparisons, all page comparison rows, leading queries, devices, leading countries, indexing exclusions, sitemap status, and mobile LCP group. Detailed account metrics are retained in the local session report rather than published in this public repository. The existing sitemap reports success; not every exclusion is an error.
 
 Implemented: intent-focused Instagram, SocialLite, and best-apps copy; real article 404s and canonical redirects; native FAQ disclosures with answers in initial HTML; server-rendered articles; honest sitemap dates; consistent bot exclusions; accurate product/team/pricing summaries; removal of unsupported SearchAction and invisible comparison FAQ markup. Removed the generic Markdown rewrite that obscured page-specific content and HTTP status.
 
-Verification: 59 tests, scoped ESLint, 51-page production build, HTTP smoke checks including Markdown Accept, and all 43 sitemap URLs passed. Each sitemap page returned 200 with one H1, its exact canonical, and parseable JSON-LD. Desktop/mobile FAQ and article UI checks passed. SocialLite's referenced JavaScript fell by 207,855 raw bytes (21.75%); field LCP improvement remains unmeasured. Changes are prepared on `codex/search-console-seo`, not deployed.
+Verification: 59 tests, scoped ESLint, 51-page production build, HTTP smoke checks including Markdown Accept, and all 43 sitemap URLs passed. Each sitemap page returned 200 with one H1, its exact canonical, and parseable JSON-LD. Desktop/mobile FAQ and article UI checks passed. SocialLite's referenced JavaScript fell by 207,855 raw bytes (21.75%); field LCP improvement remains unmeasured.
+
+Release: [PR #11](https://github.com/TheSpoolApp/spool-landing/pull/11) merged as `acf70ed`. [Vercel production deployment](https://vercel.com/neals-projects-2fc8a4e7/spool-landing/DgpxRaYfsdorAtv2nKmPqdkmozVp) is Ready and assigned to `www.thespoolapp.com`. Live smoke checks and all 43 sitemap pages passed; titles, H1s, schema, sitemap, robots, and AI-summary files matched the tested build. All 25 FAQ answers were present in initial HTML; the live article had no browser warnings/errors. Production article scripts total 748,172 raw bytes with the full content registry absent. Search rankings and field LCP require measurement after recrawl.
 
 ## DONE — 20,000-session social preview (2026-08-15)
 
