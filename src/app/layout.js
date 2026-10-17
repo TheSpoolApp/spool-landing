@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
               "sameAs": [
                 "https://twitter.com/the_spool_app",
                 "https://www.linkedin.com/company/spooli/",
-                "https://github.com/prafull2001/spool-landing",
+                "https://github.com/TheSpoolApp/spool-landing",
                 "https://apps.apple.com/us/app/spool-screen-time-control/id6749428484",
                 "https://microlaunch.net/p/spool"
               ],
@@ -104,12 +104,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebSite",
               "url": "https://www.thespoolapp.com",
-              "name": "Spool",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.thespoolapp.com/blog?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
+              "name": "Spool"
             })
           }}
         />

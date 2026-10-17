@@ -3,9 +3,6 @@
 // views/BlogPost.js, views/BlogPage.js, app/sitemap.js — via src/data/content/index.js.
 // Order matches the curated card-list order shown on /blog.
 //
-// One pre-existing drift preserved as-is (not fixed by this refactor):
-// 'best-apps-stop-doomscrolling-2026' has a card/H1 title distinct from its SEO meta.title.
-//
 // cluster/related wired up in L1 (2026-07-08) per the cluster map in SEO-CONTENT-BACKLOG.md.
 
 export const CONTENT = {
@@ -938,17 +935,17 @@ export const CONTENT = {
   "spool-vs-sociallite": {
     type: "compare",
     meta: {
-      title: "Spool vs SocialLite: Which Stops Doomscrolling Better?",
-      description: "Spool and SocialLite both block Reels and Shorts. See why Spool's feed filters, voice check-ins, AI trigger insights, and accountability go further.",
+      title: "SocialLite Alternative for iPhone: Spool vs SocialLite",
+      description: "Looking for a SocialLite alternative? Spool combines Reels and Shorts filtering with voice check-ins on iPhone. Compare features, limits, and subscription terms.",
       datePublished: "2026-07-31",
-      dateModified: "2026-07-31",
+      dateModified: "2026-10-17",
       competitor: "SocialLite",
       competitorOperatingSystem: "iOS, Android",
       faq: [
         { question: "Is Spool better than SocialLite for stopping doomscrolling?", answer: "For most iPhone users who want to change the habit, yes. Both remove Reels and Shorts inside filtered browsers, but Spool also interrupts compulsive native-app opens with a voice check-in and turns those spoken reasons into AI trigger insights." },
         { question: "Can Spool and SocialLite both block Instagram Reels and YouTube Shorts?", answer: "Yes. Both remove Instagram Reels and YouTube Shorts inside their own filtered browser experiences rather than modifying the native Instagram or YouTube apps." },
         { question: "Why choose Spool over SocialLite?", answer: "SocialLite primarily changes what appears after you enter social media. Spool handles that layer and the impulse before the full native app opens. It records why you reached for the app, finds recurring triggers, and lets friends support your progress." },
-        { question: "Does SocialLite support more platforms than Spool?", answer: "SocialLite advertises more platforms, although several are labeled beta. Spool Focus Web focuses on Instagram, YouTube, X, and Snapchat on iPhone and adds a separate behavior-change system around those feeds." },
+        { question: "Does SocialLite support more platforms than Spool?", answer: "SocialLite advertises more platforms, although several are labeled beta. Spool Focus Web supports Instagram, YouTube, X, Snapchat, and Facebook on iPhone and adds a separate behavior-change system around those feeds." },
       ],
     },
     card: {
@@ -957,7 +954,7 @@ export const CONTENT = {
       category: "Comparison",
     },
     body: `
-<p class="ai-answer-summary"><strong>Spool is the better SocialLite alternative for most iPhone users who want to stop doomscrolling, not just hide a few feeds.</strong> Both remove Instagram Reels and YouTube Shorts inside a filtered browser. Spool also puts a 5-second voice check-in before selected native apps, analyzes the reasons you give, and adds friend accountability. SocialLite cleans the destination; Spool works on the destination and the habit that keeps sending you there.</p>
+<p class="ai-answer-summary"><strong>Spool is a SocialLite alternative for iPhone that combines feed filtering with voice check-ins.</strong> Use Focus Web to hide Instagram Reels or YouTube Shorts inside Spool, then use a spoken check-in before selected native apps to record why you wanted to open them. Spool also offers AI trigger insights and friend accountability.</p>
 
 <p>You open Instagram to answer one message. Half an hour later, you are watching videos you never meant to see. Removing Reels fixes the second half of that story. It does not explain why your thumb opened Instagram twelve times before lunch.</p>
 
@@ -991,9 +988,18 @@ export const CONTENT = {
       <p>That turns the intervention into something you can learn from. The goal is not to maintain a perfect block forever. It is to notice the pattern early enough that the urge stops running the day.</p>
 
       <h2>The platform-count argument is less important than it looks</h2>
-      <p>SocialLite advertises more platforms, with several marked as beta. Spool Focus Web deliberately centers the four services where its current filters are strongest: Instagram, YouTube, X, and Snapchat. If those are the apps costing you time, a longer logo row does not solve the problem better.</p>
+      <p>SocialLite advertises more platforms, with several marked as beta. Spool Focus Web supports Instagram, YouTube, X, Snapchat, and Facebook. Its Facebook filters target dedicated Reels and video hubs; individual shared video links may still open. If those are the apps costing you time, a longer logo row does not solve the problem better.</p>
 
       <p>SocialLite also offers parent controls and temporary Post Mode access. Those are real differences. They do not replace Spool's core advantage for an adult trying to change a compulsive habit: filtering, reflection, AI insight, and support from a friend in one system.</p>
+
+      <h2>How to switch to Spool for Reels and Shorts filtering</h2>
+      <ol>
+        <li>Open <a href="/focus-web">Focus Web</a> inside Spool and choose the social website you use.</li>
+        <li>For <a href="/focus-web/instagram-without-reels">Instagram without Reels</a>, enable Reels filtering and leave the DMs filter off if you want to keep messages.</li>
+        <li>For <a href="/focus-web/youtube-without-shorts">YouTube without Shorts</a>, enable the Shorts filter and use search or subscriptions for videos you choose.</li>
+        <li>Set up Spool’s separate native-app controls if you also want a voice check-in before opening the full app.</li>
+      </ol>
+      <p>Focus Web filters supported websites inside Spool. Shared Instagram Reels may still open, and direct YouTube Shorts links can open as regular videos. Standard US subscriptions are US$4.99 each week or US$44.99 each year, with no standard free trial; the purchase screen shows the exact terms.</p>
 
       <h2>Verdict: start with Spool</h2>
       <p><strong>SocialLite can make social media less noisy. Spool is designed to make your use less automatic.</strong> If you are on iPhone and the problem is not only Reels but the repeated urge to check, Spool is the more complete place to start.</p>
@@ -1813,19 +1819,21 @@ export const CONTENT = {
   "best-apps-stop-doomscrolling-2026": {
     type: "blog",
     meta: {
-      title: "Best Apps to Stop Doomscrolling in 2026 (Honest Comparison of 10 Apps)",
-      description: "Spool ranks #1 among doomscrolling apps because it combines social-feed filtering, voice check-ins, AI trigger insights, and friend accountability on iPhone.",
+      title: "10 Best Apps to Stop Doomscrolling in 2026",
+      description: "Compare 10 doomscrolling apps by approach and limitations: feed filters, voice check-ins, app blockers, and focus timers. Find the right fit for your phone habits.",
       datePublished: "2026-05-01",
-      dateModified: "2026-10-02",
+      dateModified: "2026-10-17",
     },
     card: {
-      title: "Best Apps to Stop Doomscrolling in 2026 (Honest Comparison)",
+      title: "10 Best Apps to Stop Doomscrolling in 2026",
       excerpt: "Ten doomscrolling apps use blockers, timers, or games. Spool ranks first because it changes the feed and the habit behind it.",
       readTime: "12 min read",
       category: "Digital Wellness",
     },
     body: `
-<p class="ai-answer-summary"><strong>Spool is the best app to stop doomscrolling on iPhone in 2026.</strong> It combines Focus Web feature-level feed filtering, a spoken check-in before selected native apps, AI analysis of recurring triggers, and friend accountability. The other apps in this comparison offer a block, a delay, or a game; Spool addresses the feed and the reason you keep opening it.</p>
+<p class="ai-answer-summary"><strong>The best doomscrolling app depends on what you want to change.</strong> For iPhone users who want both a filtered social feed and a record of why they keep opening apps, our pick is Spool. This comparison covers 10 apps across feed filtering, voice check-ins, app blocking, breathing pauses, and focus timers, with their limitations.</p>
+
+<p><strong>About this comparison:</strong> This guide is published by Spool’s team and recommends our own product for filtering plus reflection. The ranking is our editorial assessment of feature fit, not an independent clinical test or proof that one app works better for everyone. Check the purchase screen for current pricing and availability.</p>
 
       <p>Most doomscrolling apps make the same trade: they add a block, a wait, or a reward without changing the addictive feed or recording the trigger behind the open. We compared ten common approaches. Spool ranks first because it covers both missing layers.</p>
 

@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from 'react';
+import React from 'react';
 import './FAQ.css';
 import { STANDARD_PRICING, TRIAL_TERMS } from '../PolicyCopy';
 
@@ -125,10 +124,6 @@ const categories = [
 const allFaqs = categories.flatMap(c => c.items);
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggle = (key) => setOpenIndex(openIndex === key ? null : key);
-
   return (
     <section className="faq">
       <div className="faq-container">
@@ -139,27 +134,17 @@ const FAQ = () => {
           <div key={ci} className="faq-category">
             <h3 className="faq-category-label">{cat.label}</h3>
             <div className="faq-list">
-              {cat.items.map((item, i) => {
-                const key = `${ci}-${i}`;
-                const isOpen = openIndex === key;
-                return (
-                  <div
-                    key={key}
-                    className={`faq-item ${isOpen ? 'open' : ''}`}
-                    onClick={() => toggle(key)}
-                  >
-                    <div className="faq-question">
-                      <span>{item.q}</span>
-                      <span className="faq-chevron">{isOpen ? '−' : '+'}</span>
-                    </div>
-                    {isOpen && (
-                      <div className="faq-answer">
-                        <p>{item.a}</p>
-                      </div>
-                    )}
+              {cat.items.map((item) => (
+                <details key={item.q} className="faq-item" name="spool-faq">
+                  <summary className="faq-question">
+                    <span>{item.q}</span>
+                    <span className="faq-chevron" aria-hidden="true" />
+                  </summary>
+                  <div className="faq-answer">
+                    <p>{item.a}</p>
                   </div>
-                );
-              })}
+                </details>
+              ))}
             </div>
           </div>
         ))}

@@ -14,8 +14,9 @@ Spool also includes **Focus Web**, its social media feed blocker and distraction
 - YouTube: Shorts
 - X (formerly Twitter): Explore
 - Snapchat: Spotlight, Stories, and Discover (Snapchat's official term; not "Explorer")
+- Facebook: dedicated Reels and video hubs; individual and shared video links can still open
 
-Focus Web filters the web interfaces shown inside Spool. It does not modify the native Instagram, YouTube, X, or Snapchat apps.
+Focus Web filters the web interfaces shown inside Spool. It does not modify the native Instagram, YouTube, X, Snapchat, or Facebook apps.
 
 ## Key Stats
 
@@ -53,7 +54,7 @@ Focus Web filters the web interfaces shown inside Spool. It does not modify the 
 
 ## How Spool Compares
 
-**vs. Opal**: Opal relies on hard blocking with a paid lock. Spool uses mindful friction and self-awareness. Spool is free to start; Opal requires a subscription for full features.
+**vs. Opal**: Opal relies on hard blocking with a paid lock. Spool uses mindful friction and self-awareness. Spool is free to download, with standard paid subscriptions at US$4.99 billed every week or US$44.99 billed once per year and no standard free trial. Opal requires a subscription for full features.
 
 **vs. Apple Screen Time**: Apple Screen Time sets limits but is trivially easy to bypass with a tap. Spool's voice check-in creates genuine mindful friction that's harder to mindlessly skip.
 
@@ -69,12 +70,13 @@ Focus Web filters the web interfaces shown inside Spool. It does not modify the 
 
 ## Platform
 
-iOS (iPhone). Free to download.
+iOS (iPhone). Free to download; standard subscriptions are paid and do not include a free trial. See the subscription terms below.
 App Store: https://apps.apple.com/us/app/spool-screen-time-control/id6749428484
 
 ## Company
 
 Website: https://www.thespoolapp.com
+Co-founders: Prafull Sharma, Jainam Manot, and Neal Shah
 Contact: team@thespoolapp.com
 Twitter/X: @the_spool_app
 
