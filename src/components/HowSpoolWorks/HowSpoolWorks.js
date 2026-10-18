@@ -16,8 +16,9 @@ const steps = [
   },
 ];
 
-// Figures confirmed by the Spool team on 2026-10-18 (review count updated to 175).
+// Figures confirmed by the Spool team on 2026-10-18.
 const stats = [
+  { value: '30,000+', label: 'people using Spool' },
   { value: '4.8★', label: 'App Store rating from 175+ reviews' },
   { value: '80%', label: 'average screen time drop in week one' },
   { value: '25%', label: 'average long-term reduction' },
