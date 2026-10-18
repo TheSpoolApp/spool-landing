@@ -1,4 +1,5 @@
 import BlogPost from '@/views/BlogPost';
+import { notFound } from 'next/navigation';
 import { PRAFULL } from '@/data/authors';
 import { getBlogMetaMap } from '@/data/content';
 
@@ -132,10 +133,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
+  if (!Object.hasOwn(blogMeta, id)) return {};
   const meta = blogMeta[id];
-  if (!meta) {
-    return { title: 'Blog' };
-  }
   return {
     // Skip the "| Spool" template when the title already names the brand.
     title: /Spool/.test(meta.title) ? { absolute: meta.title } : meta.title,
@@ -155,6 +154,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
   const { id } = await params;
+  if (!Object.hasOwn(blogMeta, id)) notFound();
   const meta = blogMeta[id];
 
   const articleSchema = meta && {
@@ -232,7 +232,7 @@ export default async function Page({ params }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }}
         />
       )}
-      <BlogPost />
+      <BlogPost id={id} />
     </>
   );
 }

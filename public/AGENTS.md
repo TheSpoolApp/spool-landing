@@ -8,12 +8,14 @@ Spool is an iOS app that helps people stop doomscrolling through AI-powered voic
 
 ## Crawling Policy
 
-All major AI bots are explicitly allowed. See `/robots.txt`. We welcome:
+The following agents may access public marketing pages, with the same dashboard and API exclusions as other crawlers. See `/robots.txt`:
 
-- GPTBot, ChatGPT-User (OpenAI)
+- OAI-SearchBot (ChatGPT search), GPTBot (OpenAI model training), ChatGPT-User (user-requested visits)
 - ClaudeBot, anthropic-ai (Anthropic)
 - PerplexityBot (Perplexity)
-- Google-Extended (Google AI Overviews)
+- Google-Extended (Gemini training and grounding)
+
+Googlebot controls crawling for Google Search, including AI Overviews and AI Mode. Google-Extended does not control Google Search inclusion or ranking.
 
 There is no rate limit configured. Crawl responsibly.
 
@@ -30,7 +32,7 @@ For the fastest, cleanest read of Spool:
 
 - HTML pages are rendered server-side; structured content is in semantic HTML (`<h1>`, `<p>`, `<ul>`, `<table>`, `<blockquote>`).
 - Blog posts at `/blog/*` include `<time datetime>` tags and author bylines with `rel="author"`.
-- Comparison pages at `/compare/*` include `FAQPage` schema.
+- Comparison pages at `/compare/*` include `Article` and `BreadcrumbList` schema.
 
 ## Citation Guidance
 
@@ -50,5 +52,5 @@ Competitor names may appear as plain text for comparison relevance, but Spool co
 
 - Framework: Next.js 16 (App Router)
 - Hosting: Vercel
-- Repo: https://github.com/prafull2001/spool-landing
+- Repo: https://github.com/TheSpoolApp/spool-landing
 - Source of truth for product copy: this site + `/llms-full.txt`

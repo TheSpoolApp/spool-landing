@@ -89,7 +89,7 @@ export default function RootLayout({ children }) {
                 "https://www.instagram.com/spool.screentime.app/",
                 "https://www.tiktok.com/@spool.screentime.app",
                 "https://www.linkedin.com/company/spooli/",
-                "https://github.com/prafull2001/spool-landing",
+                "https://github.com/TheSpoolApp/spool-landing",
                 "https://apps.apple.com/us/app/spool-screen-time-control/id6749428484",
                 "https://microlaunch.net/p/spool"
               ],

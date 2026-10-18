@@ -47,26 +47,6 @@ export async function proxy(request) {
   if (!shouldSkip(pathname)) {
     trackArrivl(request)
 
-    const accept = request.headers.get('accept') || ''
-    if (accept.includes('text/markdown') && pathname !== '/llms-full.txt' && pathname !== '/llms.txt') {
-      try {
-        const r = await fetch(`${request.nextUrl.origin}/llms-full.txt`, {
-          headers: { 'user-agent': 'spool-proxy/1.0' },
-        })
-        if (r.ok) {
-          const body = await r.text()
-          return new NextResponse(body, {
-            status: 200,
-            headers: {
-              'content-type': 'text/markdown; charset=utf-8',
-              'x-spool-markdown-source': '/llms-full.txt',
-            },
-          })
-        }
-      } catch {
-        // fall through to normal HTML response
-      }
-    }
   }
 
   return NextResponse.next()

@@ -23,7 +23,36 @@ export default function Page() {
             "description": "AI-powered screen time app that uses voice check-ins to help you stop doomscrolling and build mindful phone habits",
             "url": "https://www.thespoolapp.com",
             "image": "https://www.thespoolapp.com/og-homepage-20k.jpg",
-            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "offers": [
+              {
+                "@type": "Offer",
+                "price": "4.99",
+                "priceCurrency": "USD",
+                "eligibleRegion": "US",
+                "description": "Standard US subscription price; prices and taxes may vary by country or offer. Exact terms appear before App Store purchase confirmation. No standard free trial.",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "4.99",
+                  "priceCurrency": "USD",
+                  "unitText": "WEEK",
+                  "billingDuration": "P1W"
+                }
+              },
+              {
+                "@type": "Offer",
+                "price": "44.99",
+                "priceCurrency": "USD",
+                "eligibleRegion": "US",
+                "description": "Standard US subscription price; prices and taxes may vary by country or offer. Exact terms appear before App Store purchase confirmation. No standard free trial.",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "44.99",
+                  "priceCurrency": "USD",
+                  "unitText": "YEAR",
+                  "billingDuration": "P1Y"
+                }
+              }
+            ],
             "downloadUrl": "https://apps.apple.com/us/app/spool-screen-time-control/id6749428484",
             "applicationSubCategory": "Screen Time Management"
           })

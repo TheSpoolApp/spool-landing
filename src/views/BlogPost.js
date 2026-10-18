@@ -1,7 +1,5 @@
-"use client";
 import React from 'react';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import { DownloadLink } from '../components/DownloadLink/DownloadLink';
@@ -12,8 +10,7 @@ import { STANDARD_PRICING, TRIAL_TERMS, FOCUS_WEB_LIMITS } from '../components/P
 
 const blogContent = getBlogContentMap();
 
-const BlogPost = () => {
-  const { id } = useParams();
+const BlogPost = ({ id }) => {
   const post = blogContent[id];
 
   if (!post) {

@@ -1,4 +1,5 @@
 import BlogPost from '@/views/BlogPost';
+import { notFound } from 'next/navigation';
 import { PRAFULL } from '@/data/authors';
 import { getCompareMetaMap } from '@/data/content';
 
@@ -10,10 +11,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
+  if (!Object.hasOwn(compareMeta, id)) return {};
   const meta = compareMeta[id];
-  if (!meta) {
-    return { title: 'Compare' };
-  }
   return {
     // Skip the "| Spool" template when the title already names the brand.
     title: /Spool/.test(meta.title) ? { absolute: meta.title } : meta.title,
@@ -30,6 +29,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
   const { id } = await params;
+  if (!Object.hasOwn(compareMeta, id)) notFound();
   const meta = compareMeta[id];
 
   const articleSchema = meta
@@ -107,20 +107,6 @@ export default async function Page({ params }) {
       }
     : null;
 
-  const faqSchema = meta
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: meta.faq.map(({ question, answer }) => ({
-          '@type': 'Question',
-          name: question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: answer,
-          },
-        })),
-      }
-    : null;
   const breadcrumbSchema = meta
     ? {
         '@context': 'https://schema.org',
@@ -156,19 +142,13 @@ export default async function Page({ params }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
         />
       )}
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
       {breadcrumbSchema && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
       )}
-      <BlogPost />
+      <BlogPost id={id} />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import createMDX from '@next/mdx'
+import { CONTENT } from './src/data/content/registry.js'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -19,6 +20,17 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Resolve known article aliases before rendering to preserve a single Location header.
+      ...Object.entries(CONTENT).map(([slug, { type }]) => ({
+        source: `/${type === 'blog' ? 'compare' : 'blog'}/${slug}`,
+        destination: `/${type}/${slug}`,
+        permanent: true,
+      })),
+      {
+        source: '/blog/how-to-stop-doomscrolling-on-instagram-reels-without-quitting',
+        destination: '/blog/how-to-stop-doomscrolling-on-instagram-reels',
+        permanent: true,
+      },
       { source: '/age-cohort',  destination: '/analytics?tab=age-cohort',  permanent: false },
       { source: '/excuse-data', destination: '/analytics?tab=excuse-data', permanent: false },
     ];
