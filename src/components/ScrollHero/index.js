@@ -1,6 +1,5 @@
 "use client";
 import React, { useRef, useEffect } from 'react';
-import Link from 'next/link';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import NotificationCards from './NotificationCards';
 import PhoneMockup from './PhoneMockup';
@@ -86,19 +85,13 @@ const ScrollHero = () => {
                         y: initialContentY,
                     }}
                 >
-                    {/* Header with Logo */}
-                    <div className="hero-header">
-                        <Link href="/" className="hero-logo-center">
-                            <img src="/images/spooli_logo.jpg" alt="Spool Logo" />
-                        </Link>
-                    </div>
 
                     {/* Main Title - Simple and Premium */}
                     <div className="hero-content-layer">
                         <h1 className="hero-title-simple">
-                            Stop doomscrolling with voice check-ins
+                            Say why before you scroll
                         </h1>
-                        <p className="hero-tagline">Spool · Unwind wisely 🧵🪡</p>
+                        <p className="hero-tagline">Spool&apos;s 5-second voice check-in helps you stop doomscrolling on your phone. Users cut their screen time 80% in the first week, on average.</p>
                         <DownloadLink href={downloadUrl} className="app-store-button" target="_blank" rel="noopener noreferrer">
                             <img src="/app-store-badge.svg" alt="Download on the App Store" />
                         </DownloadLink>

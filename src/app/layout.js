@@ -26,7 +26,7 @@ export const metadata = {
   alternates: { canonical: 'https://www.thespoolapp.com' },
   icons: {
     icon: '/spooli-app-icon.png',
-    apple: '/spooli-app-icon.png'
+    apple: '/apple-touch-icon.png'
   },
 };
 
@@ -64,7 +64,12 @@ export default function RootLayout({ children }) {
                   "name": "Jainam Manot",
                   "jobTitle": "Co-founder",
                   "url": "https://www.linkedin.com/in/jainam-manot/",
-                  "sameAs": ["https://www.linkedin.com/in/jainam-manot/"]
+                  "sameAs": [
+                    "https://www.linkedin.com/in/jainam-manot/",
+                    "https://x.com/jainam_manot",
+                    "https://www.instagram.com/jainam_manot/",
+                    "https://www.tiktok.com/@jainam_manot"
+                  ]
                 },
                 {
                   "@type": "Person",
@@ -81,6 +86,8 @@ export default function RootLayout({ children }) {
               },
               "sameAs": [
                 "https://twitter.com/the_spool_app",
+                "https://www.instagram.com/spool.screentime.app/",
+                "https://www.tiktok.com/@spool.screentime.app",
                 "https://www.linkedin.com/company/spooli/",
                 "https://github.com/TheSpoolApp/spool-landing",
                 "https://apps.apple.com/us/app/spool-screen-time-control/id6749428484",

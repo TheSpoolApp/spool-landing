@@ -2,7 +2,7 @@ import { FOCUS_WEB_LIMITS } from '@/components/PolicyCopy';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer/Footer';
-import Logo from '@/components/Logo/Logo';
+import Header from '@/components/Header/Header';
 import { DownloadLink } from '@/components/DownloadLink/DownloadLink';
 import { FOCUS_WEB_PLATFORMS, getFocusWebPlatform } from '@/data/focusWeb';
 import styles from '../focus-web.module.css';
@@ -67,7 +67,7 @@ export default async function FocusWebPlatformPage({ params }) {
 
   return (
     <>
-      <Logo />
+      <Header />
       <main className={styles.page}>
         <script
           type="application/ld+json"
@@ -89,7 +89,6 @@ export default async function FocusWebPlatformPage({ params }) {
           <p className={styles.eyebrow}>Spool Focus Web for {item.platform}</p>
           <h1>{item.title}</h1>
           <p className={styles.lede}>{item.description}</p>
-          <p>{FOCUS_WEB_LIMITS}</p>
           <DownloadLink
             className={styles.primaryLink}
             target="_blank"
@@ -162,6 +161,8 @@ export default async function FocusWebPlatformPage({ params }) {
             Download Spool for iPhone
           </DownloadLink>
         </section>
+
+        <p className={styles.finePrint}>{FOCUS_WEB_LIMITS}</p>
       </main>
       <Footer />
     </>

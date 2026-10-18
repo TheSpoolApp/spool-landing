@@ -11,7 +11,8 @@
 .twoColumn,
 .faq,
 .related,
-.cta {
+.cta,
+.finePrint {
   width: min(1100px, 100%);
   margin-right: auto;
   margin-left: auto;
@@ -246,4 +247,11 @@
   .cta {
     padding: 1.4rem;
   }
+}
+
+.finePrint {
+  margin-top: 2.5rem;
+  color: #6b6b6b;
+  font-size: 0.85rem;
+  line-height: 1.6;
 }

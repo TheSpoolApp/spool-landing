@@ -48,7 +48,7 @@ const categories = [
       },
       {
         q: "What if I need to use a blocked app for work?",
-        a: "Spool doesn't hard-block apps -- it adds a brief voice check-in before opening them. If you genuinely need to use an app for work, just say so. The check-in takes about 5 seconds. This makes Spool practical for daily life, unlike hard blockers that force you to disable them entirely when you need access."
+        a: "Spool doesn't hard-block apps. It adds a brief voice check-in before opening them. If you genuinely need to use an app for work, just say so. The check-in takes about 5 seconds. This makes Spool practical for daily life, unlike hard blockers that force you to disable them entirely when you need access."
       }
     ]
   },
@@ -61,7 +61,7 @@ const categories = [
       },
       {
         q: "Why can't I put my phone down?",
-        a: "Your phone is designed to be addictive. Social media apps use variable reward schedules (the same psychology as slot machines) to keep you scrolling. Each notification, like, and new piece of content triggers a small dopamine hit that reinforces the habit loop. Spool breaks this cycle by adding a moment of conscious reflection -- speaking your reason out loud -- before the loop can begin."
+        a: "Your phone is designed to be addictive. Social media apps use variable reward schedules (the same psychology as slot machines) to keep you scrolling. Each notification, like, and new piece of content triggers a small dopamine hit that reinforces the habit loop. Spool breaks this cycle by adding a moment of conscious reflection (speaking your reason out loud) before the loop can begin."
       },
       {
         q: "What is brainrot and do I have it?",
@@ -69,15 +69,15 @@ const categories = [
       },
       {
         q: "Can phone addiction be reversed?",
-        a: "Yes. Phone addiction is a behavioral pattern, not a permanent condition. Research shows that awareness-based interventions -- understanding your triggers rather than just restricting access -- lead to lasting change. Spool users report improved focus, better sleep, and reduced anxiety within the first two weeks."
+        a: "Yes. Phone addiction is a behavioral pattern, not a permanent condition. Research shows that awareness-based interventions (understanding your triggers rather than just restricting access) lead to lasting change. Spool users report improved focus, better sleep, and reduced anxiety within the first two weeks."
       },
       {
         q: "How much screen time is too much?",
-        a: "Studies suggest over 4 hours of recreational screen time daily leads to decreased attention, poor sleep, and increased anxiety. The average adult spends 4-7 hours on their phone daily. Spool helps you see exactly where that time goes and, more importantly, why -- so you can make conscious choices about your phone use."
+        a: "Studies suggest over 4 hours of recreational screen time daily leads to decreased attention, poor sleep, and increased anxiety. The average adult spends 4-7 hours on their phone daily. Spool helps you see exactly where that time goes and, more importantly, why, so you can make conscious choices about your phone use."
       },
       {
         q: "Does a dopamine detox actually work?",
-        a: "Traditional dopamine detoxes -- going cold turkey on your phone -- rarely produce lasting results because they don't address why you scroll. Once the detox ends, the same triggers pull you back. Spool takes a different approach: instead of eliminating all stimulation, it helps you understand your specific triggers through voice check-ins so you can make conscious choices long-term."
+        a: "Traditional dopamine detoxes, like going cold turkey on your phone, rarely produce lasting results because they don't address why you scroll. Once the detox ends, the same triggers pull you back. Spool takes a different approach: instead of eliminating all stimulation, it helps you understand your specific triggers through voice check-ins so you can make conscious choices long-term."
       },
       {
         q: "How do I stop scrolling TikTok and Instagram?",
@@ -101,19 +101,19 @@ const categories = [
         a: "Spool is rated 4.8 stars as one of the best apps to stop doomscrolling. Unlike blockers like Opal or gamified apps like Brainrot, Spool uses AI voice check-ins that address why you scroll, not just when. It's more affordable than Monk ($20/mo) and Opal ($9.99/mo), and the only screen time app that captures and analyzes your spoken excuses."
       },
       {
-        q: "Spool vs Opal -- which is better?",
+        q: "Spool vs Opal: which is better?",
         a: "Opal uses hard blocking with scheduled \"Focus Sessions\" at $9.99/month or $99.99/year. Spool uses voice check-ins at US$4.99 billed every week or US$44.99 billed once per year. Opal is better if you need absolute distraction-free periods. Spool is better for building lasting awareness about why you scroll."
       },
       {
-        q: "Spool vs One Sec -- which is better?",
+        q: "Spool vs One Sec: which is better?",
         a: "One Sec adds a breathing exercise pause before opening apps. Spool asks you to speak your reason out loud. Voice requires more cognitive engagement than passively watching a breathing animation. Spool also captures why you're opening apps (not just that you tried), and includes friend accountability and AI insights that One Sec lacks."
       },
       {
-        q: "Spool vs Brainrot app -- which is better?",
-        a: "Brainrot uses a gamified brain avatar that decays with phone use -- a guilt-based approach. Spool uses AI voice check-ins -- an awareness-based approach. Guilt fatigues over time; awareness compounds. Spool also captures richer data (your spoken excuses) versus Brainrot's time-tracking."
+        q: "Spool vs Brainrot app: which is better?",
+        a: "Brainrot uses a gamified brain avatar that decays with phone use, a guilt-based approach. Spool uses AI voice check-ins, an awareness-based approach. Guilt fatigues over time; awareness compounds. Spool also captures richer data (your spoken excuses) versus Brainrot's time-tracking."
       },
       {
-        q: "Spool vs Monk app -- which is better?",
+        q: "Spool vs Monk app: which is better?",
         a: "Monk requires completing a real-world task before unlocking apps at $20/month. Spool uses 5-second voice check-ins at US$4.99 billed every week or US$44.99 billed once per year. Monk is for users who want total discipline. Spool is for users who want to understand their patterns and build lasting awareness."
       }
     ]

@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import Logo from '@/components/Logo/Logo';
+import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import '@/views/BlogPost.css';
 import { PRAFULL } from '@/data/authors';
 import { getCardList } from '@/data/content';
 
 export const metadata = {
-  title: 'Prafull Sharma — Founder of Spool',
+  title: { absolute: 'Prafull Sharma, Co-founder of Spool' },
   description:
     'Prafull Sharma is the founder of Spool, an iPhone app that uses AI voice check-ins to help people stop doomscrolling. He has analyzed 8,000+ first-person statements captured at the moment of compulsive phone use.',
   alternates: { canonical: PRAFULL.url },
@@ -58,7 +58,7 @@ export default function PrafullAuthorPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
       />
-      <Logo />
+      <Header />
       <article className="blog-post-container">
         <div className="blog-post-header">
           <Link href="/blog" className="back-to-blog">← Back to Blog</Link>

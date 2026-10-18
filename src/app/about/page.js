@@ -1,12 +1,12 @@
 import { FOCUS_WEB_LIMITS } from '@/components/PolicyCopy';
 import Link from 'next/link';
 import { DownloadLink } from '@/components/DownloadLink/DownloadLink';
-import Logo from '@/components/Logo/Logo';
+import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import './About.css';
 
 export const metadata = {
-  title: 'About Spool | The Team Behind the Doomscrolling App',
+  title: { absolute: 'About Spool: The Team Behind the Doomscrolling App' },
   description: 'Spool was founded by co-founders Prafull Sharma, Jainam Manot, and Neal Shah. We build AI voice check-ins that help iPhone users stop doomscrolling through awareness, not blocking.',
   alternates: { canonical: 'https://www.thespoolapp.com/about' },
   openGraph: {
@@ -89,7 +89,7 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
       />
-      <Logo />
+      <Header />
       <div className="about-page">
         <Link href="/" className="about-back">← Back to home</Link>
 

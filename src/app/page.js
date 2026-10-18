@@ -53,7 +53,7 @@ export default function Page() {
                 }
               }
             ],
-            "downloadUrl": "https://apps.apple.com/us/app/spool-save-your-thread/id6749428484",
+            "downloadUrl": "https://apps.apple.com/us/app/spool-screen-time-control/id6749428484",
             "applicationSubCategory": "Screen Time Management"
           })
         }}

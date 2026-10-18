@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Logo from '../components/Logo/Logo.js';
+import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer.js';
 import './SupportPage.css';
 
@@ -49,7 +49,7 @@ const SupportPage = () => {
 
   return (
     <>
-      <Logo />
+      <Header />
       <div className="support-page">
         {/* Hero Section */}
         <section className="support-hero">

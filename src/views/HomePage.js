@@ -1,18 +1,23 @@
 "use client";
 import React from 'react';
+import Header from '../components/Header/Header.js';
 import ScrollHero from '../components/ScrollHero';
 import PressProof from '../components/PressProof/PressProof.js';
+import HowSpoolWorks from '../components/HowSpoolWorks/HowSpoolWorks.js';
+import AppScreenshots from '../components/AppScreenshots/AppScreenshots.js';
 import Features from '../components/Features/Features.js';
 import CTA from '../components/CTA/CTA.js';
 import FAQ from '../components/FAQ/FAQ.js';
 import Footer from '../components/Footer/Footer.js';
-import Popup from '../components/Popup/Popup.js';
 
 const HomePage = () => {
   return (
     <>
+      <Header />
       <ScrollHero />
       <PressProof />
+      <HowSpoolWorks />
+      <AppScreenshots />
       <Features />
       <CTA />
       <FAQ />
@@ -26,10 +31,9 @@ const HomePage = () => {
       >
         {/* lowercase `datetime` (not React's `dateTime`) so the SSR HTML
             carries the spec-cased attribute AI-readiness scanners grep for */}
-        <time datetime="2026-07-31">Last updated July 31, 2026</time>
+        <time datetime="2026-10-17">Last updated October 17, 2026</time>
       </p>
       <Footer />
-      <Popup />
     </>
   );
 };

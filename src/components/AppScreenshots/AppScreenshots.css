@@ -1,0 +1,48 @@
+.app-screenshots {
+  padding: 3rem 0 4rem;
+}
+
+.app-screenshots-title {
+  font-size: 2.5rem;
+  margin: 0 0 2rem;
+  color: var(--primary-orange);
+  font-weight: bold;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.app-screenshots-row {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-screenshots-row li {
+  flex: 0 0 calc((100% - 5rem) / 5);
+  min-width: 180px;
+  scroll-snap-align: center;
+}
+
+.app-screenshots-row img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .app-screenshots-title {
+    font-size: 2rem;
+  }
+
+  .app-screenshots-row li {
+    flex-basis: 62%;
+  }
+}

@@ -1,31 +1,55 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { DownloadLink } from '../DownloadLink/DownloadLink';
+import { getCurrentURL } from '../../config/appConfig';
 import './Header.css';
-import { getCurrentConfig, getCurrentURL } from '../../config/appConfig';
 
-import logo from '../../assets/spooli_logo.png';
+const NAV_LINKS = [
+  { href: '/blog', label: 'Blog' },
+  { href: '/compare', label: 'Compare' },
+  { href: '/focus-web', label: 'Focus Web' },
+  { href: '/science', label: 'Science' },
+];
 
 const Header = () => {
-  const config = getCurrentConfig();
+  const [open, setOpen] = useState(false);
   const url = getCurrentURL();
 
   return (
-    <header className="header">
-      <div className="header-container">
-        <Link href="/" className="header-logo">
-          <img src="/images/spooli_logo.jpg" alt="Spool Logo" />
+    <header className={`site-header${open ? ' is-open' : ''}`}>
+      <div className="site-header-inner">
+        <Link href="/" className="site-header-logo" onClick={() => setOpen(false)}>
+          <img src="/images/spooli_logo.jpg" alt="" width="40" height="40" />
+          <span>Spool</span>
         </Link>
-        <nav className="header-nav">
-          <Link href="/blog">Blog</Link>
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/support">Support</Link>
-          <DownloadLink href={url} className="download-button" target="_blank" rel="noopener noreferrer">
-            {config.header_button}
-          </DownloadLink>
+
+        <nav className="site-header-nav" id="site-nav" aria-label="Main">
+          {NAV_LINKS.map((link) => (
+            <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
+
+        <div className="site-header-actions">
+          <DownloadLink href={url} className="site-header-cta" target="_blank" rel="noopener noreferrer">
+            Get the app
+          </DownloadLink>
+          <button
+            type="button"
+            className="site-header-toggle"
+            aria-expanded={open}
+            aria-controls="site-nav"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            onClick={() => setOpen(!open)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
     </header>
   );

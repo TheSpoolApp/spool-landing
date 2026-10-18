@@ -2,14 +2,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { STANDARD_PRICING, TRIAL_TERMS, RefundDataSharing } from '../components/PolicyCopy';
-import Logo from '../components/Logo/Logo.js';
+import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer.js';
 import './TermsOfServicePage.css';
 
 const TermsOfServicePage = () => {
   return (
     <>
-      <Logo />
+      <Header />
       <div className="terms-container">
         <h1>Terms of Service</h1>
         

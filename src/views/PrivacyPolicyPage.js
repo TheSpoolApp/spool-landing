@@ -1,14 +1,14 @@
 "use client";
 import React from 'react';
 import { RefundDataSharing } from '../components/PolicyCopy';
-import Logo from '../components/Logo/Logo.js';
+import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer.js';
 import './PrivacyPolicyPage.css';
 
 const PrivacyPolicyPage = () => {
   return (
     <>
-      <Logo />
+      <Header />
       <div className="privacy-policy-container">
         <h1>Privacy Policy</h1>
 
