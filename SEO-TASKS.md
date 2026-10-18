@@ -242,7 +242,7 @@ source (App Store Connect, Firestore, or RevenueCat) before they appear in new c
 - 26,000+ excuses (voice check-ins) recorded (matches homepage, commit d2ae5a2)
 - $4.99/week or $44.99/year, US prices (matches `PolicyCopy.js` and Terms, updated 2026-10-02)
 - Voice check-in takes ~5 seconds
-- 4.8 stars on App Store (120+ global reviews) (confirmed by the team 2026-10-18)
+- 4.8 stars on App Store, 175+ reviews (confirmed by the team 2026-10-18; App Store screenshot shows 4.9 and 30,000+ users, pending confirmation)
 - UNVERIFIED: download count (old figure: 2,000+)
 - 80% avg screen time reduction in first week; 25% sustained long-term reduction (confirmed by the team 2026-10-18)
 - DO NOT USE: "Verbalizing intentions increases behavior change by 42% (Harvard/Yale)" has no
