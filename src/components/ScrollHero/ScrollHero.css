@@ -455,6 +455,10 @@
         height: 40px;
     }
 
+    .scroll-hero-container {
+        height: 110vh;
+    }
+
     .phone-mockup-layer {
         width: 220px;
     }

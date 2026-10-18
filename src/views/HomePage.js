@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../components/Header/Header.js';
 import ScrollHero from '../components/ScrollHero';
 import PressProof from '../components/PressProof/PressProof.js';
+import HowSpoolWorks from '../components/HowSpoolWorks/HowSpoolWorks.js';
 import Features from '../components/Features/Features.js';
 import CTA from '../components/CTA/CTA.js';
 import FAQ from '../components/FAQ/FAQ.js';
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Header />
       <ScrollHero />
       <PressProof />
+      <HowSpoolWorks />
       <Features />
       <CTA />
       <FAQ />
