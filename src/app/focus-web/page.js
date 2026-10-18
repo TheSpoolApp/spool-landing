@@ -47,7 +47,6 @@ export default function FocusWebPage() {
             selected features on supported social websites inside Spool, so you can
             block the scroll surface instead of losing the whole platform.
           </p>
-          <p>{FOCUS_WEB_LIMITS}</p>
           <DownloadLink
             className={styles.primaryLink}
             target="_blank"
@@ -136,6 +135,8 @@ export default function FocusWebPage() {
             to see why filtering plus reflection is a more complete intervention.
           </p>
         </section>
+
+        <p className={styles.finePrint}>{FOCUS_WEB_LIMITS}</p>
       </main>
       <Footer />
     </>

@@ -72,15 +72,6 @@ const BlogPost = () => {
           </div>
         </div>
 
-        {(showFocusWebNote || showPricingNote) && (
-          <div className="blog-post-content">
-            {showFocusWebNote && <p>{FOCUS_WEB_LIMITS} <Link href="/focus-web">See platform-specific limitations</Link>.</p>}
-            {showPricingNote && (
-              <p><strong>Subscription information updated October 2, 2026.</strong> {STANDARD_PRICING} {TRIAL_TERMS} <Link href="/terms">Subscription and refund terms</Link>.</p>
-            )}
-          </div>
-        )}
-
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
 
         {post.platformSiblings && (
@@ -140,6 +131,14 @@ const BlogPost = () => {
             Try Spool on iPhone
           </DownloadLink>
         </div>
+        {(showFocusWebNote || showPricingNote) && (
+          <aside className="blog-post-fine-print" aria-label="Product and pricing notes">
+            {showFocusWebNote && <p>{FOCUS_WEB_LIMITS} <Link href="/focus-web">See platform-specific limitations</Link>.</p>}
+            {showPricingNote && (
+              <p><strong>Subscription information updated October 2, 2026.</strong> {STANDARD_PRICING} {TRIAL_TERMS} <Link href="/terms">Subscription and refund terms</Link>.</p>
+            )}
+          </aside>
+        )}
       </article>
       <Footer />
     </>

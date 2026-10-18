@@ -44,6 +44,12 @@ const Footer = () => {
               <a href="https://twitter.com/the_spool_app" target="_blank" rel="noopener noreferrer">
                 𝕏 @the_spool_app
               </a>
+              <a href="https://www.instagram.com/spool.screentime.app/" target="_blank" rel="noopener noreferrer">
+                Instagram @spool.screentime.app
+              </a>
+              <a href="https://www.tiktok.com/@spool.screentime.app" target="_blank" rel="noopener noreferrer">
+                TikTok @spool.screentime.app
+              </a>
               <a href="https://www.linkedin.com/company/spooli/" target="_blank" rel="noopener noreferrer">
                 LinkedIn
               </a>
@@ -59,8 +65,8 @@ const Footer = () => {
               <a href="https://twitter.com/whoelsebutns" target="_blank" rel="noopener noreferrer">
                 NS (@whoelsebutns)
               </a>
-              <a href="https://x.com/jainammanot" target="_blank" rel="noopener noreferrer">
-                Jainam (@jainammanot)
+              <a href="https://x.com/jainam_manot" target="_blank" rel="noopener noreferrer">
+                Jainam (@jainam_manot)
               </a>
             </div>
           </div>

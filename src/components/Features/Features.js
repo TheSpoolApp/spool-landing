@@ -2,13 +2,14 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { FOCUS_WEB_LIMITS } from '../PolicyCopy';
 import './Features.css';
 
 const features = [
   { 
     icon: '/images/spooli_block.png',
     title: 'Block addictive social feeds',
-    description: 'Focus Web filters supported social websites inside Spool, including Reels, Shorts, and Spotlight surfaces. It does not change native social apps. Native-app blocking requires separate Screen Time permission and setup.',
+    description: 'Focus Web filters supported social websites inside Spool, including Reels, Shorts, and Spotlight surfaces.',
     href: '/focus-web'
   },
   {
@@ -54,6 +55,7 @@ const Features = () => {
             </div>
           ))}
         </div>
+        <p className="features-fine-print">{FOCUS_WEB_LIMITS}</p>
       </div>
     </section>
   );
