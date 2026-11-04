@@ -7,6 +7,7 @@ const FLOW_VERSIONS = {
   v10: [10],
   v14: [14],
   v17: [17],
+  v18: [18],
 };
 
 const AB_EXPERIMENT_START_MS = Date.parse('2026-03-17T00:00:00-07:00');
@@ -37,7 +38,7 @@ export function supportsABTesting(version) {
 
 export function paywallScreenForVersion(version) {
   if (version === 'v1') return 'paywall';
-  if (version === 'v17') return 'journey_paywall';
+  if (version === 'v17' || version === 'v18') return 'journey_paywall';
   return 'sky_paywall';
 }
 

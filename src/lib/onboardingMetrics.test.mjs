@@ -1,6 +1,26 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { completionSummary, dailyCompletion, passedPaywall, fetchAllSessionPages } from './onboardingMetrics.mjs';
+import { completionSummary, dailyCompletion, passedPaywall, fetchAllSessionPages, reachedScreenNames, setupStatusLabel } from './onboardingMetrics.mjs';
+
+test('a resumed or partially instrumented session never fabricates an opening view', () => {
+  const resumed = { last_screen_name: 'journey_paywall', screens_completed: [
+    { screen_name: 'personalized_plan' }, { screen_name: 'journey_paywall' },
+    { screen_name: 'personalized_plan' },
+  ] };
+  assert.deepEqual([...reachedScreenNames(resumed)], ['personalized_plan', 'journey_paywall']);
+  assert.deepEqual([...reachedScreenNames(resumed, 'welcome')], ['welcome', 'personalized_plan', 'journey_paywall']);
+  assert.deepEqual([...reachedScreenNames({ last_screen_name: 'opening_carousel' })], ['opening_carousel']);
+  assert.equal(reachedScreenNames({}).size, 0);
+});
+
+test('existing-account sign-in is distinct from successful onboarding activation', () => {
+  const signIn = { status: 'existing_account_sign_in', dropped_off: true };
+  assert.equal(setupStatusLabel(signIn), 'Existing account sign-in');
+  assert.equal(completionSummary([signIn]).completed, 0);
+  assert.equal(setupStatusLabel({ status: 'in_progress', dropped_off: true }), 'Unfinished');
+  assert.equal(setupStatusLabel({ status: 'completed', dropped_off: false }), 'Completed');
+  assert.equal(setupStatusLabel({ status: 'completed' }), 'Unknown');
+});
 
 test('only explicit false counts as completed; missing, null and malformed flags stay in denominator', () => {
   assert.deepEqual(completionSummary([{dropped_off:false}, {dropped_off:true}, {}, {dropped_off:null}, {dropped_off:0}]),

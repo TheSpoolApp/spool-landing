@@ -15,7 +15,7 @@ import {
 } from './analyticsModel.mjs';
 import { median, medianDurationsByScreen } from '../lib/analyticsMetrics.mjs';
 import { endOfLocalDay, startOfLocalDay } from '../lib/dateRange.mjs';
-import { completionSummary, dailyCompletion, passedPaywall, fetchAllSessionPages } from '../lib/onboardingMetrics.mjs';
+import { completionSummary, dailyCompletion, passedPaywall, fetchAllSessionPages, reachedScreenNames, setupStatusLabel } from '../lib/onboardingMetrics.mjs';
 import './AnalyticsPage.css';
 
 Chart.register(...registerables);
@@ -415,6 +415,46 @@ const SCREEN_ORDER_V17 = [
   { number: 22, name: 'blocking_confirmation', label: 'Confirm' },
 ];
 
+// v18 transformation story. Names match OnboardingSessionProgress.swift and
+// the retained setup coordinator. Array order follows the actual route, including
+// the pool -> apps -> preset sequence; raw screen numbers are not ordinals.
+const SCREEN_ORDER_V18 = [
+  { number: 0, name: 'opening_carousel', label: 'Welcome Carousel' },
+  { number: 0.05, name: 'instagram_comparison', label: 'Instagram Comparison' },
+  { number: 0.1, name: 'youtube_comparison', label: 'YouTube Comparison' },
+  { number: 0.2, name: 'supported_apps', label: 'Supported Apps' },
+  { number: 1, name: 'referral_source', label: 'How Heard' },
+  { number: 2, name: 'scrolling_hours', label: 'Daily Scrolling' },
+  { number: 3, name: 'age', label: 'Age' },
+  { number: 4, name: 'social_media_reasons', label: 'Why Keep Social Media' },
+  { number: 5, name: 'previous_attempts', label: 'Previous Attempts' },
+  { number: 6, name: 'turning_point', label: 'Turning Point' },
+  { number: 6.1, name: 'life_weeks', label: 'Life in Weeks' },
+  { number: 6.2, name: 'time_cost', label: 'Time Cost' },
+  { number: 6.3, name: 'opportunities', label: 'Opportunities' },
+  { number: 6.4, name: 'not_your_fault', label: 'Not Your Fault' },
+  { number: 7, name: 'industry_voices', label: 'Industry Voices' },
+  { number: 8.1, name: 'pathway', label: 'Spool Works' },
+  { number: 8.2, name: 'research', label: 'Research' },
+  { number: 8.3, name: 'expert_feedback', label: 'Expert Feedback' },
+  { number: 8.4, name: 'community_proof', label: 'Community' },
+  { number: 8.5, name: 'rating_request', label: 'Reviews' },
+  { number: 8.6, name: 'annual_target', label: 'Time Back' },
+  { number: 8.7, name: 'commitment', label: 'Commitment' },
+  { number: 8.8, name: 'celebration', label: 'Celebration' },
+  { number: 9.85, name: 'personalized_plan', label: 'Personalized Plan' },
+  { number: 10.5, name: 'journey_paywall', label: 'Paywall' },
+  { number: 11, name: 'welcome_to_spool', label: 'Welcome to Spool' },
+  { number: 12, name: 'name_collection', label: 'Your Name' },
+  { number: 13, name: 'create_account', label: 'Create Account' },
+  { number: 14, name: 'notification_permission', label: 'Notifications' },
+  { number: 15, name: 'screen_time_permission', label: 'Connect Screen Time' },
+  { number: 19, name: 'daily_request_pool', label: 'Daily Pool Goal' },
+  { number: 17, name: 'choose_apps', label: 'Choose Apps' },
+  { number: 16, name: 'schedule_selection', label: 'First Rule' },
+  { number: 22, name: 'blocking_confirmation', label: 'Activate Protection' },
+];
+
 // v5 survey/personalization answers (onboarding_surveys) shown as per-answer breakdowns.
 // archetypeId backs up archetypeName so computed archetypes still chart if the name is missing.
 const V5_SURVEY_FIELDS = [
@@ -426,6 +466,13 @@ const V5_SURVEY_FIELDS = [
   { key: 'archetypeName', fallbackKey: 'archetypeId', label: 'Archetype' },
   { key: 'stimulationExposure', label: 'Stimulation Exposure', bucketScore: true },
   { key: 'daytimeVulnerability', label: 'Daytime Vulnerability', bucketScore: true },
+];
+
+const V18_SURVEY_FIELDS = [
+  { key: 'socialMediaReasons', label: 'Why Keep Social Media' },
+  { key: 'previousAttempts', label: 'Previous Attempts' },
+  { key: 'targetAnnualHours', label: 'Annual Time Back Goal' },
+  { key: 'intention', label: 'Intention' },
 ];
 
 // stimulationExposure / daytimeVulnerability land as 0-1 float scores —
@@ -455,7 +502,7 @@ function AnalyticsPage({ panelMode = false, dateFrom: propsDateFrom, dateTo: pro
   const sessionRequest = useRef(0);
   const [dateFrom, setDateFrom] = useState('');
   const [dateTo, setDateTo] = useState('');
-  const [version, setVersion] = useState('v17');
+  const [version, setVersion] = useState('v18');
   const [v14Cohort, setV14Cohort] = useState('prayer_lock_carousel_v14');
   const [splitByAB, setSplitByAB] = useState(false);
   const [expandedSessionIdx, setExpandedSessionIdx] = useState(null);
@@ -472,6 +519,7 @@ function AnalyticsPage({ panelMode = false, dateFrom: propsDateFrom, dateTo: pro
 
   const screenOrder =
     version === 'v1' ? SCREEN_ORDER_V1 :
+    version === 'v18' ? SCREEN_ORDER_V18 :
     version === 'v17' ? SCREEN_ORDER_V17 :
     version === 'v14' && v14Cohort === 'existing_account_setup_v14'
       ? SCREEN_ORDER_V14_EXISTING_ACCOUNT :
@@ -609,21 +657,9 @@ function AnalyticsPage({ panelMode = false, dateFrom: propsDateFrom, dateTo: pro
     const pw = paywallScreenForVersion(version);
 
     sessionList.forEach(session => {
-      // Every session starts at the first screen
-      screenCounts[firstScreen]++;
-
-      const completed = session.screens_completed || [];
-      const seenScreens = new Set();
-      seenScreens.add(firstScreen); // counted above; mark seen so it can't be recounted below
-      completed.forEach(sc => {
-        // But only count each screen once per session for the funnel
-        if (screenCounts[sc.screen_name] !== undefined && !seenScreens.has(sc.screen_name)) {
-          seenScreens.add(sc.screen_name);
-          // Don't double-count the first screen (already counted above)
-          if (sc.screen_name !== firstScreen) {
-            screenCounts[sc.screen_name]++;
-          }
-        }
+      const seenScreens = reachedScreenNames(session, version === 'v18' ? null : firstScreen);
+      seenScreens.forEach(name => {
+        if (screenCounts[name] !== undefined) screenCounts[name]++;
       });
 
       if (session.reached_paywall) {
@@ -633,15 +669,6 @@ function AnalyticsPage({ panelMode = false, dateFrom: propsDateFrom, dateTo: pro
           screenCounts[pw]++;
           seenScreens.add(pw);
         }
-      }
-      // iOS logs a screen when the user LEAVES it, so the screen they stopped on is
-      // absent from screens_completed and lives only in last_screen_name. Count it so
-      // each bar reflects everyone who reached that screen, including the final screen
-      // for users who completed (no one leaves the last screen).
-      const lastScreen = session.last_screen_name;
-      if (lastScreen && screenCounts[lastScreen] !== undefined && !seenScreens.has(lastScreen)) {
-        seenScreens.add(lastScreen);
-        screenCounts[lastScreen]++;
       }
       if (session.dropped_off === true) {
         droppedOff++;
@@ -1052,12 +1079,14 @@ function AnalyticsPage({ panelMode = false, dateFrom: propsDateFrom, dateTo: pro
   // are per-device latest-state, so without the
   // version gate a re-onboarded device would attribute its answers to old v1-v4 sessions
   const personalizationSurveyBreakdowns = useMemo(() => {
-    if (!['v5', 'v6', 'v10', 'v14', 'v17'].includes(version)) return [];
-    return V5_SURVEY_FIELDS.map(field => {
+    if (!['v5', 'v6', 'v10', 'v14', 'v17', 'v18'].includes(version)) return [];
+    const fields = version === 'v18' ? V18_SURVEY_FIELDS : V5_SURVEY_FIELDS;
+    return fields.map(field => {
       const counts = {};
       let answered = 0;
       sessions.forEach(s => {
         const survey = s.device_id ? surveys.get(s.device_id) : null;
+        if (version === 'v18' && survey?.onboarding_attempt_id !== s.onboarding_attempt_id) return;
         let value = survey?.[field.key];
         if (value == null && field.fallbackKey) value = survey?.[field.fallbackKey];
         if (value == null || value === '') return;
@@ -1455,7 +1484,8 @@ function AnalyticsPage({ panelMode = false, dateFrom: propsDateFrom, dateTo: pro
                 { id: 'v6', label: 'Reels Demo (v6/9)',      dates: '~Jul 22 – Aug 5 ’26', detail: 'reels demo + personalized plan · flow_version 6 & 9, identical flows' },
                 { id: 'v10', label: 'App 4.27 (v10)',        dates: 'Aug 5 ’26 → Sep ’26', detail: 'app 4.27 · flow_version 10 · post_purchase_journey_v10' },
                 { id: 'v14', label: 'New Carousel (v14)',    dates: '4.32 / main',         detail: 'flow_version 14 · prayer_lock_carousel_v14 + existing_account_setup_v14' },
-                { id: 'v17', label: 'Current (v17)',         dates: 'Sep 21 ’26 → now',    detail: 'app 4.39 · flow_version 17 · welcome_name_optional_chat_v17' },
+                { id: 'v17', label: 'Previous (v17)',         dates: 'Sep 21 ’26 → v18',    detail: 'app 4.39 · flow_version 17 · welcome_name_optional_chat_v17' },
+                { id: 'v18', label: 'Current (v18)',         dates: 'New onboarding',      detail: 'flow_version 18 · transformation_story_v18' },
               ].map(v => (
                 <button
                   key={v.id}
@@ -1602,7 +1632,7 @@ function AnalyticsPage({ panelMode = false, dateFrom: propsDateFrom, dateTo: pro
                           <td>{row.userLabel}</td>
                           <td>{row.lastScreen}</td>
                           <td>{row.totalTime > 0 ? row.totalTime : '--'}</td>
-                          <td>{row.droppedOff === true ? 'Unfinished' : row.droppedOff === false ? 'Completed' : 'Unknown'}</td>
+                          <td>{setupStatusLabel(row.session)}</td>
                           {showABControls && <td>{row.abGroup}</td>}
                         </tr>
                         {isExpanded && (

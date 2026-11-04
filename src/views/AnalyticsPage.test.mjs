@@ -156,7 +156,7 @@ test('v17 dashboard catalog matches the current fresh-flow Firestore contract', 
   ]);
 });
 
-test('current v17 traffic is the default while historical versions remain selectable', () => {
+test('current v18 traffic is the default while historical versions remain selectable', () => {
   const sessions = [
     { id: 'legacy' },
     { id: 'v6', flow_version: 6 },
@@ -165,16 +165,18 @@ test('current v17 traffic is the default while historical versions remain select
     { id: 'v14-fresh', flow_version: 14, flow_cohort: 'prayer_lock_carousel_v14' },
     { id: 'v14-existing', flow_version: 14, flow_cohort: 'existing_account_setup_v14' },
     { id: 'v17', flow_version: 17, flow_cohort: 'welcome_name_optional_chat_v17' },
+    { id: 'v18', flow_version: 18, flow_cohort: 'transformation_story_v18' },
   ];
 
   assert.deepEqual(filterSessionsByVersion(sessions, 'v6').map(s => s.id), ['v6', 'v9']);
   assert.deepEqual(filterSessionsByVersion(sessions, 'v10').map(s => s.id), ['v10']);
   assert.deepEqual(filterSessionsByVersion(sessions, 'v14').map(s => s.id), ['v14-fresh', 'v14-existing']);
   assert.deepEqual(filterSessionsByVersion(sessions, 'v17').map(s => s.id), ['v17']);
-  assert.match(source, /useState\('v17'\)/);
+  assert.deepEqual(filterSessionsByVersion(sessions, 'v18').map(s => s.id), ['v18']);
+  assert.match(source, /useState\('v18'\)/);
   assert.match(source, /\{ id: 'v10', label: 'App 4\.27 \(v10\)'/);
   assert.match(source, /\{ id: 'v14', label: 'New Carousel \(v14\)'/);
-  assert.match(source, /\{ id: 'v17', label: 'Current \(v17\)'/);
+  assert.match(source, /\{ id: 'v17', label: 'Previous \(v17\)'/);
   assert.match(source, /welcome_name_optional_chat_v17/);
   assert.match(source, /prayer_lock_carousel_v14 \+ existing_account_setup_v14/);
 });
@@ -184,6 +186,7 @@ test('paywall reach uses the screen name emitted by each flow version', () => {
   assert.equal(paywallScreenForVersion('v10'), 'sky_paywall');
   assert.equal(paywallScreenForVersion('v14'), 'sky_paywall');
   assert.equal(paywallScreenForVersion('v17'), 'journey_paywall');
+  assert.equal(paywallScreenForVersion('v18'), 'journey_paywall');
   assert.match(source, /const pw = paywallScreenForVersion\(version\)/);
 });
 
@@ -274,7 +277,7 @@ test('date-filtered funnels distinguish RevenueCat acquisition from Firestore se
 test('current v17 exposes all personalization question breakdowns', () => {
   assert.match(
     source,
-    /\['v5', 'v6', 'v10', 'v14', 'v17'\]\.includes\(version\)/,
+    /\['v5', 'v6', 'v10', 'v14', 'v17', 'v18'\]\.includes\(version\)/,
   );
   for (const field of [
     'goal',
@@ -288,4 +291,21 @@ test('current v17 exposes all personalization question breakdowns', () => {
   ]) {
     assert.match(source, new RegExp(`key: '${field}'`));
   }
+});
+
+
+test('v18 follows the transformation story through verified blocking activation', () => {
+  assert.deepEqual(catalogNames('SCREEN_ORDER_V18'), ['opening_carousel', 'instagram_comparison', 'youtube_comparison', 'supported_apps', 'referral_source', 'scrolling_hours', 'age', 'social_media_reasons', 'previous_attempts', 'turning_point', 'life_weeks', 'time_cost', 'opportunities', 'not_your_fault', 'industry_voices', 'pathway', 'research', 'expert_feedback', 'community_proof', 'rating_request', 'annual_target', 'commitment', 'celebration', 'personalized_plan', 'journey_paywall', 'welcome_to_spool', 'name_collection', 'create_account', 'notification_permission', 'screen_time_permission', 'daily_request_pool', 'choose_apps', 'schedule_selection', 'blocking_confirmation']);
+  assert.match(source, /version === 'v18' \? SCREEN_ORDER_V18/);
+  assert.match(source, /label: 'Current \(v18\)'/);
+  assert.match(source, /transformation_story_v18/);
+  assert.match(source, /reachedScreenNames\(session, version === 'v18' \? null : firstScreen\)/);
+});
+
+test('v18 survey breakdowns use the new questions and the matching attempt', () => {
+  for (const field of ['socialMediaReasons', 'previousAttempts', 'targetAnnualHours', 'intention']) {
+    assert.match(source, new RegExp(`key: '${field}'`));
+  }
+  assert.match(source, /version === 'v18' \? V18_SURVEY_FIELDS : V5_SURVEY_FIELDS/);
+  assert.match(source, /survey\?\.onboarding_attempt_id !== s\.onboarding_attempt_id/);
 });

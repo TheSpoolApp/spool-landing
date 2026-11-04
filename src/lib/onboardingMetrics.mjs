@@ -1,5 +1,22 @@
 import { formatLocalDate } from './dateRange.mjs';
 
+// v18 records the opening itself. Resumed and older partially instrumented
+// sessions must not acquire an opening-screen view that never occurred.
+export function reachedScreenNames(session, inferredOpeningName = null) {
+  const names = new Set(inferredOpeningName ? [inferredOpeningName] : []);
+  for (const screen of session.screens_completed || []) {
+    if (screen.screen_name) names.add(screen.screen_name);
+  }
+  if (session.last_screen_name) names.add(session.last_screen_name);
+  return names;
+}
+
+export function setupStatusLabel(session) {
+  if (session.dropped_off === false) return 'Completed';
+  if (session.status === 'existing_account_sign_in') return 'Existing account sign-in';
+  return session.dropped_off === true ? 'Unfinished' : 'Unknown';
+}
+
 // iOS writes true while onboarding is unfinished and false only on completion.
 // Missing, null, and malformed flags are unknown, never successful completions.
 export function completionSummary(sessions) {
