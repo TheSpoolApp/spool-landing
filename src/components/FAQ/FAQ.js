@@ -15,8 +15,8 @@ const categories = [
         a: "Focus Web filters supported website features inside Spool. It does not remove Reels, Shorts, or other features from separate native social apps. Native-app blocking requires separate Screen Time permission and configuration."
       },
       {
-        q: "Can Spool remove Instagram Reels without blocking Instagram?",
-        a: "Yes. Open Instagram inside Spool's Focus Web browser and switch off the surfaces you do not want. Spool can hide Reels, Stories, Explore, and direct messages (DMs) separately, subject to the supported web interface. Shared Reel links may still open. This does not change the native Instagram app."
+        q: "How can I block Reels on Instagram and keep DMs?",
+        a: "Open Instagram through Spool’s Apps tab, enable Reels filtering, and leave DMs filtering off. Focus Web filters supported Instagram website surfaces inside Spool. Stories and Explore are separate controls. Shared Reel links may still open, and the native Instagram app is unchanged."
       },
       {
         q: "Can Spool block YouTube Shorts without blocking YouTube?",
@@ -25,6 +25,10 @@ const categories = [
       {
         q: "Which X and Snapchat feeds can Spool remove?",
         a: "Spool can remove X's Explore surface and Snapchat Spotlight, Stories, and Discover inside Focus Web. Snapchat calls the recommendation surface Discover, not Explorer. On X, the For You home timeline is not filtered. Snapchat Stories filtering includes Friend Stories; chat remains available."
+      },
+      {
+        q: "Can I block Facebook Reels on iPhone?",
+        a: "Spool can hide Facebook’s dedicated Reels and video hubs inside Focus Web. Open Facebook from Spool’s Apps tab and enable Hide dedicated Reels/video hubs. Individual videos and shared video links can still open; the native Facebook app is unchanged."
       },
       {
         q: "Is Spool free?",

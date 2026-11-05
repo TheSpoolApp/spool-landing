@@ -22,6 +22,12 @@
   margin-bottom: 2rem;
 }
 
+.updated {
+  margin: 1rem 0 0;
+  color: #595959;
+  font-size: 0.9rem;
+}
+
 .eyebrow,
 .cardLabel {
   margin: 0 0 0.75rem;

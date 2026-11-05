@@ -88,11 +88,6 @@ export default function FocusWebPage() {
                     </td>
                   </tr>
                 ))}
-                <tr>
-                  <th scope="row">Facebook</th>
-                  <td>Dedicated Reels and video hubs; individual and shared video links can still open</td>
-                  <td>—</td>
-                </tr>
               </tbody>
             </table>
           </div>

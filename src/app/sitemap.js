@@ -1,4 +1,5 @@
 import { getSitemapEntries } from '@/data/content';
+import { FOCUS_WEB_PLATFORMS } from '@/data/focusWeb';
 
 export default function sitemap() {
   const baseUrl = 'https://www.thespoolapp.com';
@@ -20,11 +21,13 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.8,
     })),
-    { url: `${baseUrl}/focus-web`, lastModified: '2026-10-02', changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/focus-web/instagram-without-reels`, lastModified: '2026-10-17', changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/focus-web/youtube-without-shorts`, lastModified: '2026-10-02', changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/focus-web/x-without-explore`, lastModified: '2026-10-02', changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/focus-web/snapchat-without-spotlight`, lastModified: '2026-10-02', changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/focus-web`, lastModified: '2026-11-04', changeFrequency: 'monthly', priority: 0.9 },
+    ...FOCUS_WEB_PLATFORMS.map(({ slug, dateModified }) => ({
+      url: `${baseUrl}/focus-web/${slug}`,
+      lastModified: dateModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    })),
     { url: `${baseUrl}/about`, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/science`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/authors/prafull`, changeFrequency: 'monthly', priority: 0.6 },
