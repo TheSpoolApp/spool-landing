@@ -57,7 +57,7 @@ export default async function FocusWebPlatformPage({ params }) {
   const howToSchema = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: `How to use ${item.shortLabel} on iPhone`,
+    name: item.howToTitle || `How to use ${item.shortLabel} on iPhone`,
     step: item.details.map((detail, index) => ({
       '@type': 'HowToStep',
       position: index + 1,
@@ -89,6 +89,9 @@ export default async function FocusWebPlatformPage({ params }) {
           <p className={styles.eyebrow}>Spool Focus Web for {item.platform}</p>
           <h1>{item.title}</h1>
           <p className={styles.lede}>{item.description}</p>
+          <p className={styles.updated}>
+            Updated <time dateTime={item.dateModified}>{new Date(`${item.dateModified}T12:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}</time>
+          </p>
           <DownloadLink
             className={styles.primaryLink}
             target="_blank"
@@ -126,7 +129,7 @@ export default async function FocusWebPlatformPage({ params }) {
             one tap away.
           </p>
 
-          <h2>How to use {item.shortLabel}</h2>
+          <h2>{item.howToTitle || `How to use ${item.shortLabel}`}</h2>
           <ol>
             {item.details.map((detail) => <li key={detail}>{detail}</li>)}
           </ol>
@@ -143,6 +146,19 @@ export default async function FocusWebPlatformPage({ params }) {
             ))}
           </dl>
         </section>
+
+        {(item.guides?.length || item.sources?.length) ? (
+          <section className={styles.related} aria-label="Further reading">
+            {item.guides?.length ? <>
+              <h2>More ways to manage your feed</h2>
+              <ul>{item.guides.map(({ href, label }) => <li key={href}><Link href={href}>{label}</Link></li>)}</ul>
+            </> : null}
+            {item.sources?.length ? <>
+              <h2>Platform guidance</h2>
+              <ul>{item.sources.map(({ href, label }) => <li key={href}><a href={href}>{label}</a></li>)}</ul>
+            </> : null}
+          </section>
+        ) : null}
 
         <nav className={styles.related} aria-label="Other Focus Web platform guides">
           <h2>Remove distracting feeds on other platforms</h2>

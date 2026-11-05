@@ -86,3 +86,17 @@
   line-height: 1.6;
   text-align: center;
 }
+
+.features-guides {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.5rem;
+  margin: 2rem 0 0;
+}
+.features-guides a {
+  color: #155a80;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

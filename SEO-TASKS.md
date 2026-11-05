@@ -1,5 +1,21 @@
 # Spool SEO / ASO / GEO Task List
 
+## READY FOR REVIEW — Social feed search guides (2026-11-04)
+
+- [x] Refocus the existing Snapchat page on hiding Stories and Discover while keeping chat; preserve its indexed URL
+- [x] Add `/focus-web/facebook-without-reels` with the supported dedicated-hub filter and setup steps
+- [x] Update the existing Instagram product page and article for “block Reels on Instagram” and keeping DMs
+- [x] Connect the guides from the homepage, Focus Web hub, related pages, sitemap, and public AI summaries
+- [x] Keep FAQ/HowTo markup aligned with visible content and use substantive update dates
+- [x] Check the production build, existing tests, mobile layout, and public SEO contracts
+- [ ] Publish the reviewed changes and measure impressions/clicks after recrawl
+
+Research: ScrollGuard uses query-specific titles, direct answers, practical methods, comparison tables, FAQs, and related platform/device guides. These are observable content patterns, not proof of why Google ranks or cites it. Spool's implementation uses original copy and its own supported controls. Official Meta and Snapchat guidance is linked where the pages describe platform settings. Existing Snapchat and Instagram URLs remain stable.
+
+Validation: 63 existing tests passed; scoped ESLint has zero errors (the existing Features image warning remains); the production build generated 80 routes. All 44 sitemap pages returned 200, had one H1, their exact canonical, indexable metadata, and parseable JSON-LD. All changed FAQ answers and all 15 changed guide HowTo steps matched visible HTML. Redirect/404 smoke checks passed. Mobile review caught and fixed an overflowing comparison table; the revised article and homepage links fit a measured 390 CSS-pixel viewport.
+
+Existing follow-up: the untouched `/support` page has one FAQ schema answer/question without matching visible copy. This is separate from the changed pages. No notification-shortcoming copy, referral choices, analytics changes, or iOS changes were added. Search visibility remains unmeasured until publication and recrawl.
+
 ## RELEASED — Search Console SEO / GEO review (2026-10-17)
 
 - [x] Read project rules, lessons, existing SEO plans, and Git state

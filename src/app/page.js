@@ -3,8 +3,8 @@ import HomePage from '@/views/HomePage';
 export const metadata = {
   // `absolute` opts out of the root layout's `%s | Spool` template so the
   // homepage title isn't rendered as "…Screen Time App | Spool" (duplicate brand).
-  title: { absolute: 'Spool — Stop Doomscrolling | iPhone Screen Time App' },
-  description: 'Spool pairs AI voice check-ins with Focus Web, a browser that filters supported social website features inside Spool on iPhone. Native social apps are unchanged.',
+  title: { absolute: 'Spool — Block Reels & Shorts on iPhone' },
+  description: 'Block Instagram Reels, Facebook Reels hubs, and YouTube Shorts inside Spool’s Focus Web browser on iPhone. Keep useful social features and add voice check-ins.',
 };
 
 export default function Page() {
@@ -20,7 +20,7 @@ export default function Page() {
             "name": "Spool",
             "operatingSystem": "iOS",
             "applicationCategory": "LifestyleApplication",
-            "description": "AI-powered screen time app that uses voice check-ins to help you stop doomscrolling and build mindful phone habits",
+            "description": "iPhone screen time app with voice check-ins and Focus Web: filter Instagram Reels, Facebook Reels hubs, YouTube Shorts, and Snapchat Stories inside Spool.",
             "url": "https://www.thespoolapp.com",
             "image": "https://www.thespoolapp.com/og-homepage-20k.jpg",
             "offers": [

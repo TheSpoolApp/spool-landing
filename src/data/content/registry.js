@@ -69,56 +69,54 @@ export const CONTENT = {
   "how-to-stop-doomscrolling-on-instagram-reels": {
     type: "blog",
     meta: {
-      title: "How to Stop Doomscrolling on Instagram Reels (Without Quitting Instagram)",
-      description: "Keep the Instagram you use and lose the Reels habit. Tactical guide to interrupting the autopilot swipe into Reels using voice check-ins and feed controls.",
+      title: "How to Block Reels on Instagram (iPhone Guide)",
+      description: "Want to block Reels on Instagram and keep DMs? Compare Instagram feed controls, app limits, and Spool’s filtered browser, with steps for iPhone.",
       datePublished: "2026-05-21",
-      dateModified: "2026-07-31",
+      dateModified: "2026-11-04",
     },
     card: {
-      excerpt: "Keep the Instagram you use and lose the Reels habit. Tactical guide to interrupting the autopilot swipe into Reels.",
-      readTime: "7 min read",
+      excerpt: "Compare ways to reduce or block Instagram Reels on iPhone while keeping the conversations you came for.",
+      readTime: "4 min read",
       category: "Digital Wellness",
     },
     body: `
-<p class="ai-answer-summary"><strong>How to stop doomscrolling Instagram Reels:</strong> Remove the Reels surface instead of blocking all of Instagram. <a href="/focus-web/instagram-without-reels">Spool Focus Web</a> can hide Reels, Stories, Explore, and DMs separately inside its browser; Spool's voice check-in adds a second pause before the native app opens.</p>
-
-<p>For most Instagram users, the doomscrolling problem isn't the feed, the DMs, or stories — it's Reels. Reels behaves like TikTok and consumes time the same way, but it's embedded in an app you probably also use for things you actually want to do (messaging friends, following accounts you chose). That's the bind: you can't delete Instagram, but you can't open Instagram without falling into Reels for 40 minutes.</p>
-
-      <p>Here's how to keep Instagram and lose the Reels habit.</p>
-
-      <h2>Why Reels is the trap, not the feed</h2>
-      <p>Instagram's original chronological feed had natural endpoints. You saw posts from people you followed, scrolled until you caught up, and were done. Reels has no endpoint — it's an algorithmic infinite feed in the TikTok style, populated mostly by accounts you don't follow, optimized for engagement time. The transition from "checking Instagram" to "watching Reels for 40 minutes" usually happens unconsciously: you swipe down once on the feed and the Reels tab is the next thing.</p>
-
-      <h2>What doesn't work</h2>
-      <p><strong>Deleting Instagram.</strong> Too disruptive — you lose messaging and the accounts you actually follow. Most users reinstall within a week.</p>
-      <p><strong>Hiding the Reels tab.</strong> Instagram doesn't let you. The tab is fixed in the navigation bar.</p>
-      <p><strong>"Take a break" reminders.</strong> Instagram's own built-in nudges are easily dismissed and habituate quickly.</p>
-
-      <h2>What partially works</h2>
-      <p><strong>Marking "Not Interested" aggressively.</strong> If you only watch a Reel for 2 seconds before swiping past, you're training the algorithm to show you more of the same. Active "Not Interested" feedback on the topics you don't want (dance trends, food porn, political content, whatever your trigger category is) genuinely reduces your Reels appetite over 2-3 weeks.</p>
-
-      <p><strong>Using a filtered Instagram web experience.</strong> Plain Safari still exposes Reels and Explore. Spool's Focus Web browser can remove Reels, Stories, Explore, and DMs individually, which is more precise than deleting Instagram or blocking the whole app.</p>
-
-      <h2>What actually works: filtering plus a voice check-in</h2>
-      <p>Spool now gives you two separate interventions. <a href="/focus-web/instagram-without-reels">Focus Web</a> removes the Instagram surfaces you select inside Spool's browser. The voice check-in catches the moment you open the native app and asks, "Why am I opening Instagram?" You speak the reason in 5 seconds, then the app opens.</p>
-
-      <p>The interesting effect: most users who set Spool on Instagram discover that their stated reason rarely involves Reels. They open Instagram to message a friend, check a story, look up an account — but the autopilot swipe to Reels happens once they're inside. Naming the actual reason out loud often produces a "wait, I was just going to send a DM" course-correction.</p>
-
-      <h2>Tactical sequence for the Instagram + Reels split</h2>
-      <ol>
-        <li><strong>Use Instagram through Spool Focus Web.</strong> Switch off Reels first; hide Stories, Explore, or DMs too if any of those are part of your loop.</li>
-        <li><strong>Decide what you actually use Instagram for.</strong> Most users land on messaging + following ~20 specific accounts. That's the use case worth preserving.</li>
-        <li><strong>Disable Reels notifications and badges.</strong> Settings → Notifications → Reels and Video Posts: off.</li>
-        <li><strong>Use the Following feed, not the For You feed.</strong> Tap the Instagram logo at the top → Following. This shows only the accounts you actually chose to follow, in reverse chronological order. There's a natural endpoint.</li>
-        <li><strong>Install a moment-of-impulse intervention on Instagram specifically.</strong> Spool's voice check-in catches the autopilot open; ScreenZen's wait timer is a lighter alternative.</li>
-        <li><strong>Track your reasons.</strong> If the data shows you open Instagram 30 times a day saying "just checking," that's the lever — it's not actually about Reels, it's about checking.</li>
-      </ol>
-
-      <h2>The deeper diagnosis</h2>
-      <p>"How do I stop watching Reels" has two answers: remove the Reels entry point when you want a cleaner Instagram, and interrupt unconscious native-app opens when you still need the full app. Focus Web handles the surface; the 5-second voice check-in handles the habit.</p>
+<p class="ai-answer-summary"><strong>To block Reels on Instagram on iPhone,</strong> open Instagram through <a href="/focus-web/instagram-without-reels">Spool Focus Web</a>, enable Reels filtering, and leave the DMs filter off. This hides supported Reels surfaces in the website inside Spool while keeping messaging available. The native Instagram app is unchanged, and shared Reel links may still open.</p>
+<p>If you want fewer recommendations, Instagram’s own feed controls are another option. If you want a break from all of Instagram, an app limit can help. These approaches solve different problems, so choose based on what you want to keep using.</p>
+<h2>Which way to block or reduce Reels fits your goal?</h2>
+<table class="comparison-table feed-options-table">
+  <thead><tr><th scope="col">What to use</th><th scope="col">What changes</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Instagram’s Following feed</th><td>See posts from accounts you follow. This changes that feed; it is not a Reels blocker.</td></tr>
+    <tr><th scope="row">Not interested feedback</th><td>Adjust recommendations without removing the Reels feature.</td></tr>
+    <tr><th scope="row">An iPhone Screen Time app limit</th><td>Take a break from all of Instagram, including messaging.</td></tr>
+    <tr><th scope="row">Instagram inside Spool Focus Web</th><td>Keep DMs while hiding supported Reels surfaces. Shared video links may still open.</td></tr>
+  </tbody>
+</table>
+<h2>1. Use Following for the accounts you chose</h2>
+<p>Instagram’s Following feed shows posts from accounts you follow in chronological order. Where this control is available, open the feed selector at the top of Instagram and choose Following. It can make a visit more deliberate, but selecting a feed does not remove Reels across Instagram.</p>
+<p>Meta describes Following and Favorites in its <a href="https://about.fb.com/news/2022/03/two-new-ways-to-control-your-instagram-feed/">guide to Instagram feed controls</a>. Menu placement can vary by app version and account.</p>
+<h2>2. Use Not interested to adjust recommendations</h2>
+<p>For a recommendation you do not want, open its menu and look for Not interested. This gives Instagram feedback about what to recommend. It does not disable the entire short-video experience.</p>
+<p>Meta’s <a href="https://about.fb.com/news/2024/11/introducing-recommendations-reset-instagram/">recommendation controls guide</a> also explains resetting suggestions and using Hidden Words. Those controls change recommendation preferences; choose a feed filter if your goal is to remove supported Reels surfaces.</p>
+<h2>3. Set an app limit when you want less of all of Instagram</h2>
+<p>On iPhone, open Settings, then Screen Time, then App Limits to set a limit for Instagram. This is useful when your goal is a limit on the whole app. It does not distinguish between replying to a DM and watching Reels.</p>
+<h2>4. Block Instagram Reels in Spool while keeping DMs</h2>
+<p>Spool’s Focus Web browser gives you a filtered way to use Instagram on iPhone. Start in Spool’s Apps tab, choose Instagram, and sign in. In the Instagram filter settings, enable Reels filtering and leave DMs filtering off. Stories and Explore are separate controls.</p>
+<p>Return to Instagram through Spool for that experience. Opening the native Instagram app still opens its usual interface. For the full setup and filter details, use the <a href="/focus-web/instagram-without-reels">Instagram without Reels guide</a>.</p>
+<h2>Questions about blocking Instagram Reels</h2>
+<h3>Can I turn off every Reel in the native Instagram app?</h3>
+<p>Spool does not modify the native Instagram app. It filters supported Reels surfaces in Instagram’s website inside Spool. Shared Reel links can still open, so this is not a promise that every individual video is blocked.</p>
+<h3>Can I keep Stories and direct messages?</h3>
+<p>Yes. In Spool, keep the Stories and DMs filters off while enabling Reels filtering. You choose which supported surfaces to hide.</p>
+<h3>Do I need to delete my Instagram account?</h3>
+<p>No. Sign in to your existing Instagram account inside Spool. The filters change the supported web experience you see inside the browser.</p>
+<h3>Can I do the same with Facebook or Snapchat?</h3>
+<p>Spool has separate controls for each platform. See <a href="/focus-web/facebook-without-reels">Facebook without dedicated Reels and video hubs</a> and <a href="/focus-web/snapchat-without-spotlight">Snapchat without Stories, Discover, or Spotlight</a>.</p>
+<h2>Make your next Instagram visit intentional</h2>
+<p>Choose the conversation, account, or post you want before opening Instagram. Spool can also add a spoken check-in before selected native apps open, giving you a moment to state that intention. Use the feed filters for what appears inside Spool and the check-in for the habit of reaching for the full app.</p>
     `,
     cluster: "doomscrolling",
-    related: ["how-to-stop-doom-scrolling", "is-doomscrolling-an-addiction", "why-do-i-scroll-when-anxious"],
+    related: ["how-to-stop-doom-scrolling", "spool-vs-sociallite", "how-to-stop-doomscrolling-on-youtube-shorts"],
   },
   "how-to-stop-doomscrolling-on-youtube-shorts": {
     type: "blog",

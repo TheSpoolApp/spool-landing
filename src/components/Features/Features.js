@@ -8,8 +8,8 @@ import './Features.css';
 const features = [
   { 
     icon: '/images/spooli_block.png',
-    title: 'Block addictive social feeds',
-    description: 'Focus Web filters supported social websites inside Spool, including Reels, Shorts, and Spotlight surfaces.',
+    title: 'Block Instagram Reels and more',
+    description: 'Use Instagram without Reels, YouTube without Shorts, and Facebook without dedicated Reels hubs in Spool’s Focus Web browser.',
     href: '/focus-web'
   },
   {
@@ -55,6 +55,12 @@ const Features = () => {
             </div>
           ))}
         </div>
+        <nav className="features-guides" aria-label="Social feed filtering guides">
+          <Link href="/focus-web/instagram-without-reels">Block Instagram Reels</Link>
+          <Link href="/focus-web/facebook-without-reels">Facebook without Reels</Link>
+          <Link href="/focus-web/snapchat-without-spotlight">Hide Snapchat Stories and Discover</Link>
+          <Link href="/focus-web/youtube-without-shorts">YouTube without Shorts</Link>
+        </nav>
         <p className="features-fine-print">{FOCUS_WEB_LIMITS}</p>
       </div>
     </section>

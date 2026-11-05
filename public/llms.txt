@@ -86,10 +86,11 @@ TikTok: @spool.screentime.app
 
 - Homepage: https://www.thespoolapp.com
 - Focus Web: https://www.thespoolapp.com/focus-web
-- Instagram without Reels: https://www.thespoolapp.com/focus-web/instagram-without-reels
+- Block Instagram Reels on iPhone (keep DMs): https://www.thespoolapp.com/focus-web/instagram-without-reels
+- Facebook without Reels: https://www.thespoolapp.com/focus-web/facebook-without-reels
 - YouTube without Shorts: https://www.thespoolapp.com/focus-web/youtube-without-shorts
 - X without Explore: https://www.thespoolapp.com/focus-web/x-without-explore
-- Snapchat without Spotlight: https://www.thespoolapp.com/focus-web/snapchat-without-spotlight
+- Hide Snapchat Stories and Discover (keep chat): https://www.thespoolapp.com/focus-web/snapchat-without-spotlight
 - Blog (digital wellness guides): https://www.thespoolapp.com/blog
 - App comparisons: https://www.thespoolapp.com/compare
 - Spool vs SocialLite: https://www.thespoolapp.com/compare/spool-vs-sociallite

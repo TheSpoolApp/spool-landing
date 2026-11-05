@@ -29,9 +29,7 @@ const HomePage = () => {
           margin: '0 0 24px',
         }}
       >
-        {/* lowercase `datetime` (not React's `dateTime`) so the SSR HTML
-            carries the spec-cased attribute AI-readiness scanners grep for */}
-        <time datetime="2026-10-17">Last updated October 17, 2026</time>
+        <time dateTime="2026-11-04">Last updated November 4, 2026</time>
       </p>
       <Footer />
     </>

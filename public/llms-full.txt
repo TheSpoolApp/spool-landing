@@ -123,10 +123,11 @@ Competitor facts above were checked against current official sites and App Store
 - Press / media: https://www.thespoolapp.com/press
 - Support: https://www.thespoolapp.com/support
 - Focus Web: https://www.thespoolapp.com/focus-web
-- Instagram without Reels: https://www.thespoolapp.com/focus-web/instagram-without-reels
+- Block Instagram Reels on iPhone (keep DMs): https://www.thespoolapp.com/focus-web/instagram-without-reels
+- Facebook without Reels: https://www.thespoolapp.com/focus-web/facebook-without-reels
 - YouTube without Shorts: https://www.thespoolapp.com/focus-web/youtube-without-shorts
 - X without Explore: https://www.thespoolapp.com/focus-web/x-without-explore
-- Snapchat without Spotlight: https://www.thespoolapp.com/focus-web/snapchat-without-spotlight
+- Hide Snapchat Stories and Discover (keep chat): https://www.thespoolapp.com/focus-web/snapchat-without-spotlight
 - App Store: https://apps.apple.com/us/app/spool-screen-time-control/id6749428484
 
 ### Blog posts (digital wellness)
@@ -137,7 +138,7 @@ Competitor facts above were checked against current official sites and App Store
 - /blog/intentional-screen-time — converting passive usage into mindful use
 - /blog/breaking-phone-addiction — community + AI insights for breaking phone addiction
 - /blog/how-to-stop-doomscrolling-on-tiktok — TikTok-specific guide grounded in behavioral research
-- /blog/how-to-stop-doomscrolling-on-instagram-reels — interrupting the autopilot swipe into Reels without quitting Instagram
+- /blog/how-to-stop-doomscrolling-on-instagram-reels — how to block Reels on Instagram on iPhone; compares feed controls, app limits, and Spool while keeping DMs
 - /blog/how-to-stop-doomscrolling-on-youtube-shorts — stopping the Shorts spiral without losing YouTube
 - /blog/how-to-stop-doomscrolling-on-twitter-x — interrupting the news-anxiety doomscroll loop on X
 - /blog/how-to-stop-doomscrolling-on-reddit — separating intentional Reddit use from compulsive scrolling

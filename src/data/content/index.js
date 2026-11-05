@@ -104,7 +104,7 @@ export function getCardList() {
 // Pages that show a visible "Last updated" badge — the listicle + every
 // compare page (freshness signaling proven to matter; see E1 in the backlog).
 function showsLastUpdated(slug, entry) {
-  return entry.type === 'compare' || slug === 'best-apps-stop-doomscrolling-2026';
+  return entry.type === 'compare' || ['best-apps-stop-doomscrolling-2026', 'how-to-stop-doomscrolling-on-instagram-reels'].includes(slug);
 }
 
 // For views/BlogPost.js — shared renderer for both /blog/[id] and /compare/[id].

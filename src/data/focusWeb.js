@@ -1,50 +1,60 @@
 export const FOCUS_WEB_PLATFORMS = [
   {
-    slug: 'instagram-without-reels',
-    platform: 'Instagram',
-    shortLabel: 'Instagram without Reels',
-    title: 'Instagram Without Reels on iPhone (Keep DMs)',
-    description:
-      'Use Instagram without Reels on iPhone. Hide Reels in Spool’s Focus Web browser while keeping DMs available. See setup, optional filters, and limits.',
-    answer:
-      'To use Instagram without Reels on iPhone, open Instagram in Spool’s Focus Web browser and turn on the Reels filter. Leave the DMs filter off to keep messaging available. Stories and Explore have separate controls. This filters Instagram’s website inside Spool; it does not change the native Instagram app, and shared Reel links may still open.',
-    removes: ['Reels', 'Stories', 'Explore', 'Direct messages (DMs)'],
-    available:
-      'Instagram’s web experience remains available inside Spool; only supported surfaces you switch off are filtered. Shared Reel links may still open.',
-    problem:
-      'Blocking all of Instagram also blocks the parts you may use intentionally. Spool works at the feature level instead: remove the surface that starts the scroll while leaving the rest of the web experience available.',
-    details: [
-      'Open Focus Web in Spool and choose Instagram.',
-      'Sign in to Instagram inside the Focus Web browser.',
-      'Turn on the Reels filter. Leave DMs unfiltered if you want to keep messaging.',
-      'Choose whether to filter Stories and Explore separately, then browse Instagram through Focus Web.',
-      'Return to Instagram through Spool for the filtered experience; opening the native Instagram app will still show its normal interface.',
+    "slug": "instagram-without-reels",
+    "platform": "Instagram",
+    "shortLabel": "Instagram without Reels",
+    "title": "Block Instagram Reels on iPhone (Keep DMs)",
+    "dateModified": "2026-11-04",
+    "description": "Block Instagram Reels in Spool’s Focus Web browser on iPhone while keeping DMs. Learn the setup, optional Stories and Explore filters, and how shared links work.",
+    "answer": "To block Reels on Instagram while keeping DMs, open Instagram from the Apps tab in Spool. Enable the Reels filter and leave the DMs filter off. Focus Web hides supported Reels surfaces in Instagram’s website inside Spool; shared Reel links may still open.",
+    "removes": [
+      "Reels",
+      "Stories (optional)",
+      "Explore (optional)",
+      "Direct messages (optional)"
     ],
-    faq: [
-      {
-        q: 'Can I use Instagram without Reels and still keep DMs?',
-        a: 'Yes. Enable Reels filtering and leave DMs filtering off in Spool Focus Web. You can use Instagram messaging in the filtered browser. These controls do not change the native Instagram app.',
-      },
-      {
-        q: 'Will this block every Instagram Reel link?',
-        a: 'No. Focus Web hides supported Reels surfaces, but shared Reel links may still open. It is a filtered way to browse Instagram, not a guarantee that every individual video is blocked.',
-      },
-      {
-        q: 'Can I remove Instagram Reels without blocking Instagram?',
-        a: 'Yes. Open Instagram inside Spool Focus Web and switch off Reels. Spool filters the website inside Spool; shared Reel links may still open and the native app is unchanged.',
-      },
-      {
-        q: 'Can Spool hide Instagram Stories and DMs too?',
-        a: 'Yes. Reels, Stories, Explore, and direct messages are separate controls, so you can remove the combination that matches your habits.',
-      },
-      {
-        q: 'Does Spool change the native Instagram app?',
-        a: 'No. Focus Web is an in-app browser. It filters Instagram’s web interface inside Spool and does not modify Meta’s native Instagram app.',
-      },
+    "available": "Keep DMs by leaving their filter off. Profiles, search, and the rest of the supported Instagram web experience remain available. Stories and Explore have separate filters.",
+    "problem": "You might open Instagram to reply to a friend and end up watching Reels. Filtering the Reels surface lets you return to the conversation without blocking all of Instagram.",
+    "howToTitle": "How to block Reels on Instagram with Spool",
+    "details": [
+      "Install Spool on your iPhone and open the Apps tab, where the Focus Web browser lives.",
+      "Choose Instagram and sign in to your Instagram account inside Spool.",
+      "In Instagram’s filter settings in Spool, keep Reels filtering enabled and leave DMs filtering off.",
+      "Choose whether you also want to hide Stories or Explore. These are separate controls.",
+      "Open Instagram through Spool whenever you want to use the filtered version."
     ],
+    "faq": [
+      {
+        "q": "Can I block Reels on Instagram without deleting Instagram?",
+        "a": "Yes. Use Instagram through Spool Focus Web on iPhone and enable Reels filtering. Your Instagram account stays the same, and DMs remain available when their filter is off. The separate native Instagram app keeps its normal interface."
+      },
+      {
+        "q": "How do I use Instagram for DMs without Reels?",
+        "a": "Open Instagram inside Spool, enable the Reels filter, and leave the DMs filter off. Go to messages in that filtered web experience. You can also hide Stories and Explore separately."
+      },
+      {
+        "q": "Does this disable Reels in the native Instagram app?",
+        "a": "No. Spool filters Instagram’s website inside its own browser. It does not change the native Instagram app. Use Instagram through Spool for the filtered experience."
+      },
+      {
+        "q": "Will every Reel my friends send be blocked?",
+        "a": "No. Shared Reel links may still open. The Reels filter removes supported Reels surfaces; it is not a guarantee that every individual video link is blocked."
+      },
+      {
+        "q": "Is hiding Reels the same as an Instagram time limit?",
+        "a": "No. A time limit controls when you can use the whole app. Focus Web changes which supported features appear while you browse Instagram inside Spool."
+      }
+    ],
+    "guides": [
+      {
+        "href": "/blog/how-to-stop-doomscrolling-on-instagram-reels",
+        "label": "Compare ways to block or reduce Instagram Reels"
+      }
+    ]
   },
   {
     slug: 'youtube-without-shorts',
+    dateModified: '2026-10-02',
     platform: 'YouTube',
     shortLabel: 'YouTube without Shorts',
     title: 'YouTube Without Shorts on iPhone',
@@ -79,6 +89,7 @@ export const FOCUS_WEB_PLATFORMS = [
   },
   {
     slug: 'x-without-explore',
+    dateModified: '2026-10-02',
     platform: 'X (Twitter)',
     shortLabel: 'X without Explore',
     title: 'X (Twitter) Without Explore',
@@ -112,38 +123,110 @@ export const FOCUS_WEB_PLATFORMS = [
     ],
   },
   {
-    slug: 'snapchat-without-spotlight',
-    platform: 'Snapchat',
-    shortLabel: 'Snapchat without Spotlight',
-    title: 'Snapchat Without Spotlight, Stories or Discover',
-    description:
-      'Remove Snapchat Spotlight, Stories, and Discover inside Spool Focus Web. Keep a more intentional Snapchat web experience without public-content feeds.',
-    answer:
-      'Spool can hide Spotlight, Stories, and Discover from Snapchat inside Focus Web. “Discover” is Snapchat’s official name for the recommendation surface—there is no Snapchat feature officially named “Explorer.”',
-    removes: ['Spotlight', 'Stories', 'Discover'],
-    available: 'Chat remains available. Stories filtering also includes Friend Stories; only the web experience inside Spool is affected.',
-    problem:
-      'Snapchat combines direct social use with public-content surfaces. Spotlight is an endless short-video feed, while Stories and Discover add more recommendation-led paths. Spool lets you remove those paths inside its browser.',
-    details: [
-      'Hide Spotlight, Snapchat’s public short-form video feed.',
-      'Hide Stories when tapping through the Stories page is the behavior you want to stop.',
-      'Hide Discover, Snapchat’s official name for its public-content discovery surface.',
-      'Open Snapchat through Focus Web when you want the filtered version rather than the full native app.',
+    "slug": "snapchat-without-spotlight",
+    "platform": "Snapchat",
+    "shortLabel": "Snapchat without Stories or Discover",
+    "title": "Hide Snapchat Stories & Discover on iPhone (Keep Chat)",
+    "dateModified": "2026-11-04",
+    "description": "Hide Snapchat Stories, Discover, and Spotlight in Spool on iPhone while keeping chat. See the two filter settings and how to use Snapchat through Focus Web.",
+    "answer": "To hide Snapchat Stories and Discover while keeping chat, open Snapchat from Spool’s Apps tab and keep “Hide Stories & Discover” enabled. Enable “Hide Spotlight” to remove the short-video feed too. These filters work in Snapchat’s web experience inside Spool, where chat remains available.",
+    "removes": [
+      "Stories and Discover, including Friend Stories",
+      "Spotlight"
     ],
-    faq: [
-      {
-        q: 'Can I remove Snapchat Spotlight?',
-        a: 'Yes. Spool Focus Web can hide Spotlight inside its filtered Snapchat web experience.',
-      },
-      {
-        q: 'Is the Snapchat feature called Explore or Discover?',
-        a: 'Snapchat calls it “Discover.” Official Snapchat support refers to Spotlight and Discover as separate personalized public-content surfaces.',
-      },
-      {
-        q: 'Can Spool hide Snapchat Stories too?',
-        a: 'Yes. Spotlight, Stories, and Discover can be removed from the Focus Web experience.',
-      },
+    "available": "Chat remains available inside Spool. The Stories filter also hides Friend Stories, so use it when you want Snapchat for conversations without the Stories pages.",
+    "problem": "Keeping Snapchat for conversations can still leave Stories, Discover, and Spotlight within reach. Spool lets you remove those paths while keeping access to chat in its browser.",
+    "howToTitle": "How to hide Snapchat Stories, Discover, and Spotlight",
+    "details": [
+      "Install Spool on your iPhone and open the Apps tab.",
+      "Choose Snapchat and sign in to your Snapchat account inside Spool.",
+      "In Snapchat’s filter settings in Spool, keep “Hide Stories & Discover” enabled. This covers Friend Stories and the public Stories/Discover page.",
+      "Keep “Hide Spotlight” enabled to remove the short-video feed as well.",
+      "Return to Snapchat through Spool when you want to chat with these filters applied."
     ],
+    "faq": [
+      {
+        "q": "Is there an app that hides all Stories and Discover from Snapchat?",
+        "a": "Spool can hide Snapchat Stories and Discover inside its Focus Web browser on iPhone. The “Hide Stories & Discover” control includes Friend Stories and the public Stories/Discover page. Chat remains available."
+      },
+      {
+        "q": "Can I use Snapchat just for chats without Spotlight?",
+        "a": "Yes. Open Snapchat through Spool and keep both “Hide Spotlight” and “Hide Stories & Discover” enabled to remove those feeds while keeping chat available."
+      },
+      {
+        "q": "Can I keep Friend Stories while hiding Discover?",
+        "a": "Spool’s current “Hide Stories & Discover” control groups Friend Stories with the public Stories/Discover page. It does not offer separate switches for those two surfaces."
+      },
+      {
+        "q": "Does Spool remove Discover from the native Snapchat app?",
+        "a": "No. The filters apply to Snapchat’s web experience inside Spool. The separate Snapchat app is unchanged, so return through Spool to use the filtered version."
+      },
+      {
+        "q": "Is hiding one Snapchat story the same as removing Discover?",
+        "a": "No. Snapchat’s “Hide this Content” action hides an individual recommendation. Spool’s Stories & Discover filter removes the supported Stories and Discover surfaces inside its browser."
+      }
+    ],
+    "sources": [
+      {
+        "href": "https://help.snapchat.com/hc/en-gb/articles/7012313073556-How-to-Hide-or-Unhide-a-Story-in-Discover",
+        "label": "Snapchat Support: hiding individual Stories in Discover"
+      }
+    ]
+  },
+  {
+    "slug": "facebook-without-reels",
+    "platform": "Facebook",
+    "shortLabel": "Facebook without Reels",
+    "title": "Block Facebook Reels on iPhone with Spool",
+    "dateModified": "2026-11-04",
+    "description": "Use Facebook without its dedicated Reels and video hubs inside Spool on iPhone. See how to set up the filter and which Facebook content stays available.",
+    "answer": "To block Facebook’s dedicated Reels and video hubs on iPhone, open Facebook from the Apps tab in Spool and enable “Hide dedicated Reels/video hubs.” Focus Web filters Facebook’s website inside Spool. Individual videos and shared video links can still open.",
+    "removes": [
+      "Dedicated Reels hubs",
+      "Dedicated video hubs"
+    ],
+    "available": "Other supported Facebook web pages remain available inside Spool. Individual videos, including shared video links, can still open. This filter does not promise to remove every video from your home feed.",
+    "problem": "A quick visit to a Facebook group or profile can turn into a Reels session. Removing the dedicated Reels and video hubs closes those browsing paths while leaving the rest of the supported website available.",
+    "howToTitle": "How to use Facebook without Reels hubs on iPhone",
+    "details": [
+      "Install Spool on your iPhone and open the Apps tab.",
+      "Choose Facebook and sign in to your Facebook account inside Spool.",
+      "In Facebook’s filter settings in Spool, keep “Hide dedicated Reels/video hubs” enabled.",
+      "Browse the Facebook pages you came to use. Dedicated Reels and video hubs are filtered; individual video links can still open.",
+      "Open Facebook through Spool for this filtered experience."
+    ],
+    "faq": [
+      {
+        "q": "Can I block Facebook Reels without blocking all of Facebook?",
+        "a": "Yes. Spool Focus Web hides Facebook’s dedicated Reels and video hubs inside its browser. Other supported Facebook web pages remain available. Individual and shared video links can still open."
+      },
+      {
+        "q": "How do I turn off Facebook Reels on iPhone?",
+        "a": "For a filtered Facebook experience, open Facebook through Spool and enable “Hide dedicated Reels/video hubs.” This changes the website shown inside Spool; it does not turn off Reels in the separate native Facebook app."
+      },
+      {
+        "q": "Will this remove every Reel or video from my Facebook feed?",
+        "a": "No. The filter targets dedicated Reels and video hubs. Individual videos and shared links may still appear or open, including content shared in other Facebook pages."
+      },
+      {
+        "q": "Does Facebook’s Show less option remove Reels?",
+        "a": "Show less is feedback about recommendations. It changes what Facebook recommends rather than acting as a filter for its entire Reels area. Spool instead hides the dedicated hubs inside Focus Web."
+      },
+      {
+        "q": "Is a Facebook time limit the same as a Reels blocker?",
+        "a": "No. A time limit restricts use of the whole app. Spool’s Facebook filter targets dedicated Reels and video hubs within the supported web experience."
+      },
+      {
+        "q": "Can Spool block Instagram Reels too?",
+        "a": "Yes. Instagram has its own filters in Spool. Enable Reels filtering and leave the DMs filter off if you want to keep Instagram messaging."
+      }
+    ],
+    "sources": [
+      {
+        "href": "https://about.fb.com/news/2023/05/discover-and-personalize-facebook-reels/",
+        "label": "Meta: how Show more and Show less affect Reels recommendations"
+      }
+    ]
   },
 ];
 
