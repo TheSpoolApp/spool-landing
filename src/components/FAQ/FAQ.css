@@ -157,3 +157,12 @@
     font-size: 0.85rem;
   }
 }
+
+.faq-download-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}

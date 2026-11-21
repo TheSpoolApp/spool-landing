@@ -4,7 +4,7 @@ import { motion, useMotionValue, useTransform } from 'framer-motion';
 import NotificationCards from './NotificationCards';
 import PhoneMockup from './PhoneMockup';
 import BackgroundGlow from './BackgroundGlow';
-import { DownloadLink } from '../DownloadLink/DownloadLink';
+import StoreBadges from '../StoreBadges/StoreBadges';
 import { getCurrentURL } from '../../config/appConfig';
 import './ScrollHero.css';
 
@@ -92,9 +92,7 @@ const ScrollHero = () => {
                             Say why before you scroll
                         </h1>
                         <p className="hero-tagline">Spool&apos;s 5-second voice check-in helps you stop doomscrolling on your phone. Users cut their screen time 80% in the first week, on average.</p>
-                        <DownloadLink href={downloadUrl} className="app-store-button" target="_blank" rel="noopener noreferrer">
-                            <img src="/app-store-badge.svg" alt="Download on the App Store" />
-                        </DownloadLink>
+                        <StoreBadges appStoreUrl={downloadUrl} showAndroidBadge />
                         <aside className="hero-excuses-badge">
                             <span>26k+ excuses recorded</span>
                         </aside>

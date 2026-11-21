@@ -1,0 +1,66 @@
+.group {
+  display: grid;
+  justify-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.platform {
+  border: 1px solid #b7dcca;
+  border-radius: 999px;
+  background: #effaf3;
+  color: #174b34;
+  font-size: 0.8rem;
+  font-weight: 650;
+  padding: 0.28rem 0.75rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: relative;
+  z-index: 25;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  border-radius: 7px;
+}
+
+.links a:focus-visible {
+  outline: 2px solid var(--primary-blue, #174b73);
+  outline-offset: 3px;
+}
+
+.apple {
+  width: auto;
+  height: 44px;
+}
+
+.play {
+  /* Google's source has a transparent perimeter; line up the visible badge
+     with the App Store image while retaining the original artwork. */
+  width: auto;
+  height: 65.5px;
+  margin: -5px -10.75px;
+}
+
+@media (max-width: 350px) {
+  .links {
+    gap: 10px;
+  }
+
+  .apple {
+    height: 40px;
+  }
+
+  .play {
+    height: 59.5px;
+    margin-inline: -9.75px;
+  }
+}
