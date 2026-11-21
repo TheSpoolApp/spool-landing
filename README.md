@@ -76,8 +76,8 @@ The Spool production database is `spool-a5020` / `(default)`. This repository's 
 For a monthly review, or after a significant change in storage, run these commands in Cloud Shell or another environment with Node 20+ and an authenticated Google Cloud CLI. Use different snapshot filenames for each review.
 
 ```sh
-node scripts/firestore-storage-report.mjs --save storage-before.json
-node scripts/firestore-storage-report.mjs --previous storage-before.json --save storage-after.json
+node scripts/firestore-storage-report.mjs --save "$HOME/spool-storage-before.json"
+node scripts/firestore-storage-report.mjs --previous "$HOME/spool-storage-before.json" --save "$HOME/spool-storage-after.json"
 ```
 
 The report reads Google's aggregate database and collection statistics. Snapshot dates can lag the live database. Compare snapshots with different timestamps and check which collection and index category actually changed. Keep snapshots outside the repository. A periodic full scan of customer documents adds read costs and is unnecessary for this report.
