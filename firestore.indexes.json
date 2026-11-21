@@ -1,51 +1,166 @@
 {
-  // Example (Standard Edition):
-  //
-  // "indexes": [
-  //   {
-  //     "collectionGroup": "widgets",
-  //     "queryScope": "COLLECTION",
-  //     "fields": [
-  //       { "fieldPath": "foo", "arrayConfig": "CONTAINS" },
-  //       { "fieldPath": "bar", "mode": "DESCENDING" }
-  //     ]
-  //   },
-  //
-  //  "fieldOverrides": [
-  //    {
-  //      "collectionGroup": "widgets",
-  //      "fieldPath": "baz",
-  //      "indexes": [
-  //        { "order": "ASCENDING", "queryScope": "COLLECTION" }
-  //      ]
-  //    },
-  //   ]
-  // ]
-  //
-  // Example (Enterprise Edition):
-  //
-  // "indexes": [
-  //   {
-  //     "collectionGroup": "reviews",
-  //     "queryScope": "COLLECTION_GROUP",
-  //     "apiScope": "MONGODB_COMPATIBLE_API",
-  //     "density": "DENSE",
-  //     "multikey": false,
-  //     "fields": [
-  //       { "fieldPath": "baz", "mode": "ASCENDING" }
-  //     ]
-  //   },
-  //   {
-  //     "collectionGroup": "items",
-  //     "queryScope": "COLLECTION_GROUP",
-  //     "apiScope": "MONGODB_COMPATIBLE_API",
-  //     "density": "SPARSE_ANY",
-  //     "multikey": true,
-  //     "fields": [
-  //       { "fieldPath": "baz", "mode": "ASCENDING" }
-  //     ]
-  //   },
-  // ]
-  "indexes": [],
-  "fieldOverrides": []
+  "indexes": [
+    {
+      "collectionGroup": "_serverRefundAccounts",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "sync_status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "next_sync_at_ms",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "ASCENDING"
+        }
+      ],
+      "density": "SPARSE_ALL"
+    },
+    {
+      "collectionGroup": "_serverRefundEvidence",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "source_rc_id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "occurred_at_ms",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "ASCENDING"
+        }
+      ],
+      "density": "SPARSE_ALL"
+    },
+    {
+      "collectionGroup": "bonuses",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "creatorId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "paidAt",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "DESCENDING"
+        }
+      ],
+      "density": "SPARSE_ALL"
+    },
+    {
+      "collectionGroup": "videos",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "creatorId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "postedAt",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "DESCENDING"
+        }
+      ],
+      "density": "SPARSE_ALL"
+    }
+  ],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "_serverRefundEvidence",
+      "fieldPath": "app_version",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundEvidence",
+      "fieldPath": "build",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundEvidence",
+      "fieldPath": "duration_seconds",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundEvidence",
+      "fieldPath": "operation_id",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundEvidence",
+      "fieldPath": "reported_access_source",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundEvidence",
+      "fieldPath": "reported_environment",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundEvidence",
+      "fieldPath": "session_id",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundOperations",
+      "fieldPath": "consent_version",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundOperations",
+      "fieldPath": "disclosure_version",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundOperations",
+      "fieldPath": "privacy_version",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundOperations",
+      "fieldPath": "requested_consent_state",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundOperations",
+      "fieldPath": "reviewer_uid",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundOperations",
+      "fieldPath": "source",
+      "ttl": false,
+      "indexes": []
+    },
+    {
+      "collectionGroup": "_serverRefundOperations",
+      "fieldPath": "terms_version",
+      "ttl": false,
+      "indexes": []
+    }
+  ]
 }

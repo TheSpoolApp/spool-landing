@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Firestore storage maintenance
+
+The Spool production database is `spool-a5020` / `(default)`. This repository's `firestore.indexes.json` records the four composite indexes present on November 21, 2026 and the refund field exemptions. Review index changes alongside the queries that need them. Apple and support review use the composite index on `_serverRefundEvidence(source_rc_id, occurred_at_ms)`. Batched Focus Web review uses the single-field `minute_ms` index. Receipt deduplication and terms history use document IDs.
+
+For a monthly review, or after a significant change in storage, run these commands in Cloud Shell or another environment with Node 20+ and an authenticated Google Cloud CLI. Use different snapshot filenames for each review.
+
+```sh
+node scripts/firestore-storage-report.mjs --save "$HOME/spool-storage-before.json"
+node scripts/firestore-storage-report.mjs --previous "$HOME/spool-storage-before.json" --save "$HOME/spool-storage-after.json"
+```
+
+The report reads Google's aggregate database and collection statistics. Snapshot dates can lag the live database. Compare snapshots with different timestamps and check which collection and index category actually changed. Keep snapshots outside the repository. A periodic full scan of customer documents adds read costs and is unnecessary for this report.
+
+Before exempting a field, check filters and sorting in released clients, deployed functions, support tools and reports. Compare the declared index configuration with a fresh export from `firebase firestore:indexes --project spool-a5020 --database '(default)'`. Apply only the intended changes, wait for the Firestore operations to finish, and verify the affected live queries. To re-enable default indexing for an exempt field, remove that field override and wait for its indexes to rebuild before shipping a query that relies on it.
+
+Index maintenance preserves document fields. Treat record expiry as a separate decision. Refund retries use operation receipts, withdrawal checks use consent history, and transaction-specific Apple and support review reads evidence from the purchase period. A proposed expiry needs a documented last consumer, a bound on delayed uses, and a test for replay of an old request. If storage growth is driven by indexes, address those first.
