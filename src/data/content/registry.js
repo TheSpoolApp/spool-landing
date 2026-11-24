@@ -116,7 +116,98 @@ export const CONTENT = {
 <p>Choose the conversation, account, or post you want before opening Instagram. Spool can also add a spoken check-in before selected native apps open, giving you a moment to state that intention. Use the feed filters for what appears inside Spool and the check-in for the habit of reaching for the full app.</p>
     `,
     cluster: "doomscrolling",
-    related: ["how-to-stop-doom-scrolling", "spool-vs-sociallite", "how-to-stop-doomscrolling-on-youtube-shorts"],
+    related: ["how-to-turn-off-infinite-scroll-on-instagram", "spool-vs-sociallite", "how-to-stop-doomscrolling-on-youtube-shorts"],
+  },
+  "how-to-turn-off-infinite-scroll-on-instagram": {
+    type: "blog",
+    meta: {
+      title: "Can You Turn Off Infinite Scroll on Instagram? What Actually Works (2026)",
+      description: "Instagram has no setting that turns off infinite scroll. Here are the controls that do exist, what each one actually changes, and how to remove the endless feeds on iPhone while keeping DMs.",
+      datePublished: "2026-11-24",
+      dateModified: "2026-11-24",
+    },
+    card: {
+      excerpt: "There is no off switch for Instagram's endless feed. Here is what each real setting does, and how to remove the feeds without deleting the app.",
+      readTime: "6 min read",
+      category: "Doomscrolling",
+    },
+    body: `
+<p class="ai-answer-summary"><strong>Can you turn off infinite scroll on Instagram?</strong> No. As of November 2026, Instagram has no setting that turns off infinite scroll in the home feed, Reels, or Explore. You can make the feed easier to stop: switch to the Following feed, turn off Reels auto scroll, set time reminders, or add an iPhone app limit. To remove the endless feeds completely while keeping messages, open Instagram through a filtered browser such as <a href="/focus-web/instagram-without-reels">Spool Focus Web</a>.</p>
+
+<p>Infinite scroll is the reason one quick check becomes forty minutes. There is no bottom of the page, so there is never a natural moment to stop. Searching for a way to switch it off is a reasonable instinct. The honest answer is that Instagram does not offer one, and the settings that come closest work on the edges of the problem, not the center.</p>
+
+<p>This guide covers what each real option changes, what it does not, and which combination works if you want to keep Instagram for messages and friends without getting pulled into the feed.</p>
+
+      <h2>Why Instagram has no "off" switch for infinite scroll</h2>
+      <p>The endless feed is not a side feature. It is the core of how Instagram keeps people watching, and regulators have started saying so directly. On July 10, 2026, the European Commission issued preliminary findings that the addictive design of Instagram and Facebook breaches the EU's Digital Services Act. The Commission pointed to infinite scroll, autoplay, and highly personalized recommendations, and said Meta should disable features such as infinite scroll and autoplay by default.</p>
+
+      <p>Those findings are not final. Meta said it disagrees with them, and the case is still open. Until something changes, there is no built-in toggle, so the practical question is which workarounds actually help.</p>
+
+      <h2>Option 1: Switch to the Following feed</h2>
+      <p>Tap the Instagram logo at the top of the Home tab and choose <strong>Following</strong> or <strong>Favorites</strong>. Instagram introduced both views in 2022. They show posts from accounts you follow (or a short list of favorites) in chronological order, without recommended posts mixed in.</p>
+      <ul>
+        <li><strong>What it fixes:</strong> fewer recommended posts from strangers, which are the main fuel of the endless feed.</li>
+        <li><strong>What it does not fix:</strong> it is not the default view, so the app opens back on the main ranked feed. Reels and Explore are still one tap away.</li>
+      </ul>
+
+      <h2>Option 2: Turn off Reels auto scroll</h2>
+      <p>Instagram added an auto scroll option for Reels that moves to the next video on its own. If you have turned it on, switch it off: while a Reel is playing, tap the three dots menu and turn off <strong>Auto scroll</strong>. The exact menu can vary by app version.</p>
+      <ul>
+        <li><strong>What it fixes:</strong> Reels stop advancing without you.</li>
+        <li><strong>What it does not fix:</strong> the swipe is still there. Manual scrolling through Reels is the habit most people are trying to break.</li>
+      </ul>
+
+      <h2>Option 3: Use Instagram's time management tools</h2>
+      <p>Instagram's <strong>Time management</strong> settings (under Settings and activity) include time reminders (availability varies by account type) and Quiet mode, which pauses notifications during hours you choose. Teen accounts get stronger defaults, including reminders to close the app and parent-set daily limits through Supervision.</p>
+      <ul>
+        <li><strong>What it fixes:</strong> a nudge when you have been on too long, and fewer notification pulls.</li>
+        <li><strong>What it does not fix:</strong> for adults, reminders can be dismissed in one tap. They also arrive after the scrolling has happened.</li>
+      </ul>
+
+      <h2>Option 4: Set an iPhone Screen Time limit</h2>
+      <p>On iPhone, go to <strong>Settings → Screen Time → App Limits</strong>, add Instagram, and choose a daily allowance. When it runs out, iOS shows a block screen.</p>
+      <ul>
+        <li><strong>What it fixes:</strong> a hard cap on total daily time.</li>
+        <li><strong>What it does not fix:</strong> it blocks the whole app, including DMs, and "Ignore Limit" is always available. Many people hit the limit, ignore it, and keep going.</li>
+      </ul>
+
+      <h2>Option 5: Remove the endless feeds and keep the useful parts</h2>
+      <p>None of the native options remove the feed itself. That is the gap a filtered browser fills. <a href="/focus-web">Spool Focus Web</a> opens Instagram inside Spool with the surfaces you choose removed. You can turn on Reels filtering, and Explore, Stories, and DMs are separate controls, so you can keep messages while hiding the endless parts.</p>
+      <ol>
+        <li>Open Spool and go to Focus Web.</li>
+        <li>Choose Instagram and turn on the Reels filter. Add Explore if that is where you lose time.</li>
+        <li>Leave the DMs filter off if you use Instagram to message friends.</li>
+        <li>Use Instagram through Focus Web for everyday checking.</li>
+      </ol>
+      <p>Focus Web filters supported websites inside Spool. It does not modify the native Instagram app, and shared Reels links may still open. See the full guide to <a href="/focus-web/instagram-without-reels">using Instagram without Reels</a>.</p>
+
+      <h2>Option 6: Interrupt the open, not just the scroll</h2>
+      <p>Every option above changes what happens after Instagram is open. Most doomscrolling starts earlier, with an automatic thumb movement toward the app. Spool adds a short voice check-in before selected native apps open: you say why you are opening it, and Spool's AI turns those spoken reasons into patterns over time, such as "bored after work" or "avoiding an email." That gives you a reason to stop that a timer cannot.</p>
+
+      <h2>Which combination works best</h2>
+      <table class="comparison-table">
+        <tr><th>Option</th><th>Removes the endless feed?</th><th>Keeps DMs?</th><th>Easy to bypass?</th></tr>
+        <tr><td>Following feed</td><td>Partly (fewer recommendations)</td><td>Yes</td><td>Yes, resets to the main feed</td></tr>
+        <tr><td>Reels auto scroll off</td><td>No</td><td>Yes</td><td>Not relevant</td></tr>
+        <tr><td>Instagram time reminders</td><td>No</td><td>Yes</td><td>Yes, one tap</td></tr>
+        <tr><td>iPhone Screen Time limit</td><td>No, blocks the whole app</td><td>No</td><td>Yes, "Ignore Limit"</td></tr>
+        <tr><td>Spool Focus Web</td><td>Yes, inside Focus Web</td><td>Yes</td><td>Native app still exists</td></tr>
+        <tr><td>Spool voice check-in</td><td>Interrupts the open</td><td>Yes</td><td>Designed as a pause, not a wall</td></tr>
+      </table>
+      <p>For most people who want to keep Instagram for friends, the strongest setup is the Following feed and auto scroll off as a baseline, Focus Web for daily checking, and a voice check-in in front of the full app for the moments you reach for it on autopilot.</p>
+
+      <h2>Frequently asked questions</h2>
+      <h3>Is there an Instagram setting to stop endless scrolling?</h3>
+      <p>No. Instagram offers time reminders, Quiet mode, and the Following feed, but no setting that ends the feed or turns off infinite scroll.</p>
+      <h3>Can you disable scrolling on Instagram Reels?</h3>
+      <p>Not inside the Instagram app. You can turn off Reels auto scroll, but manual swiping stays. To hide Reels entirely, use a filtered browser such as Spool Focus Web.</p>
+      <h3>Does the Following feed stop recommended posts?</h3>
+      <p>It only shows posts from accounts you follow, in time order, so it is not padded out with recommendations from strangers the way the main feed is. It is not the default view, so you have to choose it each time you open the app.</p>
+      <h3>Will the EU force Instagram to turn off infinite scroll?</h3>
+      <p>The European Commission's July 2026 findings are preliminary. Meta can respond before any final decision, so it is too early to say what will change or where.</p>
+    `,
+    cluster: "doomscrolling",
+    related: ["how-to-stop-doomscrolling-on-instagram-reels", "why-cant-i-put-my-phone-down", "best-apps-stop-doomscrolling-2026"],
   },
   "how-to-stop-doomscrolling-on-youtube-shorts": {
     type: "blog",
@@ -630,6 +721,99 @@ export const CONTENT = {
     cluster: "doomscrolling",
     related: ["how-to-stop-doom-scrolling", "is-doomscrolling-an-addiction", "doom-scrolling-habit"],
   },
+  "is-sociallite-free": {
+    type: "blog",
+    meta: {
+      title: "Is SocialLite Free? Pricing, How It Works, and Free Alternatives (2026)",
+      description: "SocialLite is free to download but needs a paid subscription for new users. What it costs, how it blocks Reels and Shorts, how it compares with ScrollGuard, and the free alternatives.",
+      datePublished: "2026-11-24",
+      dateModified: "2026-11-24",
+    },
+    card: {
+      excerpt: "SocialLite is free to download, not free to use. What it costs, how it works, how it compares with ScrollGuard, and the free options.",
+      readTime: "7 min read",
+      category: "Comparison",
+    },
+    body: `
+<p class="ai-answer-summary"><strong>Is SocialLite free?</strong> Not for new users. SocialLite is free to download, but its FAQ says new signups need a paid subscription, there is no universal free tier, and a free trial is not guaranteed. The standard US reference price it lists is US$9.99 a month or US$29.99 a year. Prices on the App Store have varied over time, so check the purchase screen before you subscribe.</p>
+
+<p>SocialLite is one of the better-known apps for using Instagram, YouTube, and other social platforms without Reels and Shorts. A lot of people search for whether it is free, whether it actually works, and what to use instead. This guide answers each of those directly, including where SocialLite is a good fit and where it is not.</p>
+
+<p><em>SocialLite and ScrollGuard details were checked against their public websites and App Store listings on November 24, 2026. Prices, trials, and features change, and can vary by country.</em></p>
+
+      <h2>How much does SocialLite cost?</h2>
+      <p>SocialLite's own FAQ, as of November 2026, says:</p>
+      <ul>
+        <li>The app is free to download from the App Store.</li>
+        <li>New signups need a paid subscription to use it. There is no universal free tier.</li>
+        <li>The standard US reference prices are <strong>US$9.99 per month</strong> or <strong>US$29.99 per year</strong>.</li>
+        <li>A free trial is not guaranteed. It depends on eligibility, plan, purchase platform, and region. If you are eligible, the trial length and the price after it appear before you confirm.</li>
+      </ul>
+      <p>Two things make the price confusing. First, SocialLite's older Terms of Service still describe a free tier with default blocking, which conflicts with the newer FAQ. Second, the plans listed in the App Store's in-app purchases section have shown different prices over time, including family plans. The purchase screen inside the app is the only reliable price for your account and country.</p>
+
+      <h2>Is there a free version of SocialLite?</h2>
+      <p>Not for new users, according to its current FAQ. Some people who joined earlier describe free features, which is likely why search results disagree. If you install it today, expect a paywall.</p>
+
+      <h2>How does SocialLite work?</h2>
+      <p>SocialLite does not change the native Instagram or YouTube apps. Instead, it gives you filtered versions of social platforms inside its own app, with Reels, Shorts, and similar feeds removed and direct messages kept. To stop you from slipping back into the full apps, it can shield the native apps. When you need to post something, <strong>Post Mode</strong> unlocks the native app for a length of time you choose and then locks it again automatically.</p>
+      <p>It advertises support for more platforms than most competitors, with some labeled beta, and it is listed for both iOS and Android. It also offers parent controls.</p>
+      <p>If you have seen SocialLite "Hard Mode" mentioned, we could not find it described on SocialLite's public FAQ or pricing pages as of November 24, 2026. Check inside the app for what your version offers.</p>
+
+      <h2>Does SocialLite actually work?</h2>
+      <p>For its main job, removing Reels and Shorts while keeping messages, it generally does, and it is rated well on the App Store. Three limits are worth knowing before you pay:</p>
+      <ul>
+        <li><strong>It works inside its own app.</strong> The native apps are still on your phone. Shielding and Post Mode help, but the filtered view only protects you while you use it.</li>
+        <li><strong>Platforms change their sites.</strong> Any filtered browser depends on Instagram and YouTube's web versions, so individual users report bugs when those sites change. That applies to every app in this category, including Spool's Focus Web.</li>
+        <li><strong>It changes the feed, not the urge.</strong> Removing Reels removes one trap. It does not tell you why you opened Instagram twelve times before lunch, so the habit can move to Stories, another app, or repeated message checking.</li>
+      </ul>
+
+      <h2>Is SocialLite safe?</h2>
+      <p>SocialLite is published on the App Store by Sociallite LLC. As with every App Store listing, its privacy label is self-reported by the developer and not independently verified by Apple. Any filtered-browser app sees the pages you load inside it, so read the privacy label and the developer's privacy policy before signing in to your social accounts.</p>
+
+      <h2>SocialLite vs ScrollGuard</h2>
+      <p>ScrollGuard is the app people most often compare with SocialLite. Both remove short-form feeds without deleting the apps you need, but they are built differently.</p>
+      <table class="comparison-table">
+        <tr><th></th><th>SocialLite</th><th>ScrollGuard</th></tr>
+        <tr><td>Price</td><td>Paid subscription for new users (US$9.99/month or US$29.99/year reference)</td><td>Free download with in-app purchases; premium adds unlimited custom filters</td></tr>
+        <tr><td>How it filters</td><td>Filtered platforms inside the SocialLite app, with native-app shielding</td><td>Clean web-app versions of sites, using Safari-based web apps on iPhone</td></tr>
+        <tr><td>Keeps DMs</td><td>Yes</td><td>Yes, the native app stays installed for messages and notifications</td></tr>
+        <tr><td>Posting</td><td>Post Mode temporarily unlocks the native app</td><td>Use the native app</td></tr>
+        <tr><td>Platforms</td><td>Many, some in beta; iOS and Android</td><td>Instagram, YouTube, TikTok, Facebook, X, Reddit, and LinkedIn listed on iPhone</td></tr>
+        <tr><td>Addresses why you scroll</td><td>No</td><td>No</td></tr>
+      </table>
+      <p>If price is the deciding factor, ScrollGuard's free tier is the cheaper place to start. If you want native-app shielding and Post Mode, SocialLite does more. Neither one looks at the reason you reached for your phone.</p>
+
+      <h2>Free alternatives to SocialLite</h2>
+      <p>If you want to avoid a subscription entirely, these are the realistic free options:</p>
+      <ul>
+        <li><strong>Instagram's Following feed.</strong> Tap the Instagram logo on Home and choose Following to see only accounts you follow, in time order. Reels and Explore are still there, but the main feed has fewer recommendations. See <a href="/blog/how-to-turn-off-infinite-scroll-on-instagram">what works for Instagram's infinite scroll</a>.</li>
+        <li><strong>iPhone Screen Time limits.</strong> Free and built in, but they block the whole app, DMs included, and are easy to ignore.</li>
+        <li><strong>ScrollGuard's free tier.</strong> The closest free match to SocialLite's main feature.</li>
+        <li><strong>Mobile websites in Safari.</strong> Using Instagram in a browser instead of the app adds friction, though Reels are still reachable.</li>
+      </ul>
+
+      <h2>Where Spool fits</h2>
+      <p>Spool is not free either, so it is fair to say that plainly. Standard US subscriptions are US$4.99 a week or US$44.99 a year, with no standard free trial, and prices can vary by country. What it adds is the layer the filtered browsers skip:</p>
+      <ul>
+        <li><strong><a href="/focus-web">Focus Web</a></strong> removes Instagram Reels, YouTube Shorts, and other surfaces inside Spool, with Stories, Explore, and DMs as separate controls.</li>
+        <li><strong>A voice check-in</strong> before selected native apps open asks why you are opening them, and Spool's AI turns those spoken reasons into the triggers behind your scrolling.</li>
+        <li><strong>Friend accountability</strong> lets someone you trust support your progress.</li>
+      </ul>
+      <p>For a full side-by-side, read <a href="/compare/spool-vs-sociallite">Spool vs SocialLite</a>.</p>
+
+      <h2>Frequently asked questions</h2>
+      <h3>Does SocialLite cost money?</h3>
+      <p>Yes for new users. The download is free, but its FAQ says new signups need a paid subscription, with US reference prices of US$9.99 a month or US$29.99 a year.</p>
+      <h3>Does SocialLite have a free trial?</h3>
+      <p>Sometimes. SocialLite says a trial is not guaranteed and depends on eligibility, plan, platform, and region. The purchase screen shows whether you qualify.</p>
+      <h3>Does SocialLite block apps or just websites?</h3>
+      <p>Both, in different ways. It filters social platforms inside its own app, and it can shield the native apps, with Post Mode to unlock them temporarily for posting.</p>
+      <h3>Is ScrollGuard better than SocialLite?</h3>
+      <p>ScrollGuard is cheaper to start with because it has a free tier. SocialLite offers more control over the native apps. The better choice depends on whether price or app shielding matters more to you.</p>
+    `,
+    cluster: "choosing-an-app",
+    related: ["spool-vs-sociallite", "best-apps-stop-doomscrolling-2026", "how-to-turn-off-infinite-scroll-on-instagram"],
+  },
   "spool-vs-apple-screen-time": {
     type: "compare",
     meta: {
@@ -1013,7 +1197,7 @@ export const CONTENT = {
       <p>Not yet. Spool is currently built for iPhone.</p>
     `,
     cluster: "choosing-an-app",
-    related: ["spool-vs-dull", "spool-vs-undoomed", "best-apps-stop-doomscrolling-2026"],
+    related: ["is-sociallite-free", "spool-vs-dull", "best-apps-stop-doomscrolling-2026"],
   },
   "spool-vs-dull": {
     type: "compare",

@@ -147,6 +147,8 @@ Competitor facts above were checked against current official sites and App Store
 - /blog/how-much-screen-time-is-too-much-2026 — why "hours per day" is the wrong metric
 - /blog/does-grayscale-mode-work — the real research on grayscale mode's effect on phone use
 - /blog/why-do-i-scroll-when-anxious — the anxiety-phone connection and what breaks the loop
+- /blog/how-to-turn-off-infinite-scroll-on-instagram: why Instagram has no infinite-scroll toggle, what each real setting changes, and how to remove the endless feeds on iPhone while keeping DMs
+- /blog/is-sociallite-free: SocialLite pricing, how it works, SocialLite vs ScrollGuard, and free alternatives (checked November 24, 2026)
 
 ### App comparisons
 
