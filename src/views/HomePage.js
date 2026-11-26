@@ -29,7 +29,9 @@ const HomePage = () => {
           margin: '0 0 24px',
         }}
       >
-        <time dateTime="2026-11-04">Last updated November 4, 2026</time>
+        <time dateTime="2026-11-20">Last updated November 20, 2026</time>
+        <br />
+        Android is a trademark of Google LLC.
       </p>
       <Footer />
     </>

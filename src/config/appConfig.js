@@ -9,7 +9,10 @@ export const APP_CONFIG = {
   // App Store link (when app is live)
   APP_STORE_URL: "https://apps.apple.com/us/app/spool-screen-time-control/id6749428484",
 
-  // Spool is currently iOS-only. Add the Android package here if that changes.
+  // Public Android download; keep the iOS campaign fallback independent.
+  GOOGLE_PLAY_URL: "https://play.google.com/store/apps/details?id=com.spool.android&pcampaignid=web_share",
+
+  // Legacy in-app browser escape behavior for existing iOS links.
   ANDROID_PACKAGE: null,
 
   // AppsFlyer OneLinks by ?src=. Unknown or missing sources intentionally fall

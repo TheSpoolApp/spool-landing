@@ -1,5 +1,6 @@
 import React from 'react';
 import './FAQ.css';
+import { APP_CONFIG } from '../../config/appConfig';
 import { STANDARD_PRICING, TRIAL_TERMS } from '../PolicyCopy';
 
 const categories = [
@@ -44,7 +45,8 @@ const categories = [
       },
       {
         q: "Is Spool available for Android?",
-        a: "Spool is currently available on iPhone only (iOS). An Android version is on the roadmap. Join the waitlist at thespoolapp.com to be notified when it launches."
+        a: "Yes. Download Spool for Android on Google Play. Features may differ from the iPhone version.",
+        link: { href: APP_CONFIG.GOOGLE_PLAY_URL, label: "Get it on Google Play" }
       },
       {
         q: "Is my data safe with Spool?",
@@ -146,6 +148,7 @@ const FAQ = () => {
                   </summary>
                   <div className="faq-answer">
                     <p>{item.a}</p>
+                    {item.link && <a className="faq-download-link" href={item.link.href}>{item.link.label}</a>}
                   </div>
                 </details>
               ))}
